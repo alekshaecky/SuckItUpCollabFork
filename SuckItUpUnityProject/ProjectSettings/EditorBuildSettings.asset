@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/CollabMenu.unity
+    guid: b484975c8f6b58c40b96534b64b3e60d
+  - enabled: 1
+    path: Assets/Scenes/SecretMenu.unity
+    guid: ed581517babfddb45a6e2121ff27fca1
+  - enabled: 1
+    path: Assets/Scenes/DeviceInfo.unity
+    guid: c4b4c026a1771c948b0b98256b396e27
+  - enabled: 1
+    path: Assets/Scenes/HUB.unity
+    guid: 939475b96f9585a49b126672fbf62c32
+  - enabled: 1
+    path: Assets/Scenes/3rdPartyTestScene.unity
+    guid: 15692eecf44deed4a994e020c9e29624
+  - enabled: 1
+    path: Assets/Scenes/Class1.unity
+    guid: b7125024ae2509646af0f01048868cc7
+  m_configObjects: {}

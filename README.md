@@ -3,7 +3,7 @@ Spring 2023 Collab Project
 
 
 
-# Setp for working with Unity and Git for MART450
+# Setup for working with Unity and Git for MART450
 
 * This should take about 30 minutes.
 * You must have a 64-bit computer.

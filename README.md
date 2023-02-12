@@ -38,7 +38,7 @@ Note: Even if you have a GitHub account, join via the invitation.
 
 1. When done, open Git Bash (from the Desktop shortcut that was created). This is a console window to use with Git. 
 1. In the console, type `which git` followed by Enter. This should return a directory. 
-2. 1. In the console, type `which git-lfs` followed by Enter. This should return a directory.
+1. In the console, type `which git-lfs` followed by Enter. This should return a directory.
 
 That's it for now.
 
@@ -76,7 +76,7 @@ TBD.
 
 ## Keep local backups
 
-1.Use **Assets > Back Up Unity Project** via the included `DIYVCS.cs` editor script. 
+1. Use **Assets > Back Up Unity Project** via the included `DIYVCS.cs` editor script. 
 1. Store backups in an entirely different folder (not below a folder with .git file) so it doesn't go to GitHub. 
 1. Make regular backups to an external drive or to the cloud. Something will go wrong, and you will need your backups. 
 

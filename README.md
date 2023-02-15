@@ -40,13 +40,13 @@ An access token is a unique and complex passcode.
 1. Copy the token and save it in a secure place. (It will disappear once you are done with the page.)
 
 
-## 3. Install GitHub Desktop
+## 3. Install GitHub Desktop 
 
-1. Go to https://desktop.github.com/ and follow the instructions.
+1. Go to https://desktop.github.com/ and follow the instructions for your Platform.
 1. Open GitHub Desktop.
 1. Select File > Options > Accounts and sign in / verify with your GitHub account.
 
-## 4. Install Git (Needed to use command line git)
+## 4a. Install Git - WINDOWS
 
 1. Go to https://git-scm.com/download/win and follow the instructions and make choices:
 
@@ -62,6 +62,21 @@ An access token is a unique and complex passcode.
 1. In the console, type `which git-lfs` followed by Enter. This should return a directory.
 
 That's it for now.
+
+## 4b. Install Git - MAC
+
+Official instructions: https://git-scm.com/download/mac
+
+Use Software Update in System Settings to stay up to date.
+
+* Use Terminal to install Apple's Command Line Developer Tools:
+`xcode-select --install`
+
+1. Install **homebrew** if you don't already have it: https://brew.sh/
+2. Install git: `$ brew install git`
+3. Install git-lfs:`brew install git-lfs` (on Mac, it does not come with GitHub Desktop)
+
+If you have any Mac spefic issues, post in Discord and ping Jesse B. who has offered to help. 
 
 ## 5. Getting the 450 Project for the first time
 

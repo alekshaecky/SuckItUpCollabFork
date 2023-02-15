@@ -98,7 +98,13 @@ Then, working with GitHub Desktop:
 1. Click **Clone**. 
 1. You should get an **Initialize Git LFS** popup. You must click **Initialize Git LFS**. 
 
-## 5. Open your project in Unity
+This is what it will look like. 
+![image](https://user-images.githubusercontent.com/7841348/219176667-c00daaf6-195d-43d4-b11e-54b3da7a2d0a.png)
+
+You can click **Show in Explorer** (or it Finder) to see the project files on your computer if you wish, and verify it's all there.
+
+
+## 6. Open your project in Unity
 
 1. Start Unity and open the project. 
 2. Build and run the project.

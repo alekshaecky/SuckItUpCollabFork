@@ -84,13 +84,18 @@ You will be asked to authenticate along this process.
 Use your email/username and password.
 If that doesn't work, use the Access Token for your password. 
 
-1. Open GitHub Desktop. 
+If you haven' done so:
+1. Go to the Repository for the class code at https://github.com/MART450Spring/SuckItUpGame
+1. Click the green **Code** button and copy the HTTPS URL.
+
+Then, working with GitHub Desktop:
+1. Open GitHub Desktop if it's not open yet.
 1. Make sure you are logged in.
-1. Select File > Clone Repository.
-1. Click the URL tab.
-1. Paste the URL that you copied from GitHub.
-1. Set the local path for storing the project.
-1. Click Clone. 
+1. Select **File > Clone Repository.**
+1. Click the **URL** tab.
+1. Paste the URL that you copied from GitHub. 
+1. Set the local path for storing the project. That's, where you want the project to go on your computer.
+1. Click **Clone**. 
 1. You should get an **Initialize Git LFS** popup. You must click **Initialize Git LFS**. 
 
 ## 5. Open your project in Unity

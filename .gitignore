@@ -5,6 +5,12 @@
 [Bb]uilds/
 [Ll]ogs/
 
+# Personal Settings Files
+SuckItUpUnityProject/UserSettings/Layouts/default-2021.dwlt
+SuckItUpUnityProject/Assets/StreamingAssets/build_info
+SuckItUpUnityProject/UserSettings/Layouts/default-2021.dwlt
+
+
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*
 

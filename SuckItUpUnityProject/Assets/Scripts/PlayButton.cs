@@ -23,6 +23,6 @@ public class PlayButton : MonoBehaviour
 	void OnMouseDown()
 	{
 		SoundBoard.Instance.PlaySFX(indexSFX);
-		SceneManager.LoadScene(PlayerPrefs.GetInt("PrefsStartingSceneIndex"));
+		SceneManager.LoadScene(PlayerPrefs.GetInt("PrefsStartingSceneIndex", 3));
 	}
 }

@@ -117,6 +117,24 @@ Your project is now ready to work with.
 * Switch to Force Text in Edit → Project Settings → Editor → Asset Serialization Mode.
 1. Build and run the project.
 
+### Unity Tools
+Verify that you have the following tools in your project. 
+If they are missing, use the Package Manager to install them. 
+
+* WebGL Publisher (... you've used this in every class)
+* ProBuilder (for modeling)
+* TextMeshPro (3D Text objects)
+
+1. Open **Windows > Package Manager**
+2. Select **Packages: In Project** to see what you still need to install.
+3. Select **Packages: Unity Registry**. 
+4. Use Search to find the tool to install. 
+5. Verify it's the right tool. 
+6. On the bottom right, click the **Install** button. (If it says Remove, then you already have the tool installed.)
+7. For WebGL Publisher: Verify that you have the **Publish > WebGL Project** menu in the toolbar. 
+8. For ProBuilder: There should be a **Tools > Pro Builder** menu in the toolbar. 
+9. For TextMeshPro look for this menu item: **GameObject > 3D Object > Text - TextMeshPro**.
+
 If you have no errors, you are now set up. 
 
 # <a name="Tips"></a> Working on the SuckItUpGame Tips

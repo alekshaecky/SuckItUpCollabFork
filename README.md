@@ -101,7 +101,7 @@ Then, working with GitHub Desktop:
 1. Paste the URL that you just copied from GitHub. 
 1. Set the local path for storing the project. That's, where you want the project to go on your computer.
 1. Click **Clone**. 
-1. You should get an **Initialize Git LFS** popup. You must click **Initialize Git LFS**. 
+1. You should get an **Initialize Git LFS** popup. DO NOT INITILIAZIE LFS (OK, nothing bad happens, but less potential for trouble.)
 
 This is what it should look like. 
 ![image](https://user-images.githubusercontent.com/7841348/219176667-c00daaf6-195d-43d4-b11e-54b3da7a2d0a.png)

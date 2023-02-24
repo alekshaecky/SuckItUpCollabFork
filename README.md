@@ -286,7 +286,7 @@ You only have to do this ONCE, to remove the LFS tools, and to get the non-lfs f
 1. Open your command line tool
 1. Use the `cd` command to go to your GIT project. (The folder/directory that has the .git file in it.)
 1. Enter `lfs uninstall`
-2. Enter 'git pull` and wait for the pull to finish. There should be no errors.
+2. Enter `git pull` and wait for the pull to finish. There should be no errors.
 3. Enter `git lfs ls-files` and the result should be an empty line.
 
 **If you have any trouble, either ask for help in Discord, or do this instead.**
@@ -297,7 +297,6 @@ This basically starts from scratch with a new cloned project.
 1. Open GitHub Desktop.
 1. It will probably ask you about a non-existin repo. Just tell it to remove it.
 1. Follow the instructions above for cloning the repository. It's Step 5.
-
 1. In your command line tool, go to the project directory.
 1. Enter `dgit lfs ls-files` and it should return an empty line.
 

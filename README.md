@@ -295,10 +295,10 @@ This basically starts from scratch with a new cloned project.
 1. Delete your current project. (You have a backup of the assets your created, yes? Otherwise, make one now!)
 1. Yes, that's deleting the whole local project. You can just do that in your File Explorer/Finder.
 1. Open GitHub Desktop.
-1. It will probably ask you about a non-existin repo. Just tell it to remove it.
+1. It will probably ask you about a non-existing repo. Just tell it to remove it.
 1. Follow the instructions above for cloning the repository. It's Step 5.
 1. In your command line tool, go to the project directory.
-1. Enter `dgit lfs ls-files` and it should return an empty line.
+1. Enter `git lfs ls-files` and it should return an empty line.
 
 Done. 
 

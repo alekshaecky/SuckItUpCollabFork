@@ -20,6 +20,7 @@ public class Pause : MonoBehaviour
 
 	public AudioClip ButtonSFX;
 	public int indexSFX;
+	public Font guiFont;            // default font to use for OnGui elements
 
 	void Start()
 	{
@@ -87,6 +88,13 @@ public class Pause : MonoBehaviour
 
 	void OnGUI()
 	{
+		if (guiFont != null)
+		{
+			// sets the global font used by OnGUI() UI stuff
+			GUI.skin.font = guiFont;
+			Debug.Log("Set font to " + guiFont.name);
+		}
+
 		if (bPaused)
 		{
 			//Calculate change aspects

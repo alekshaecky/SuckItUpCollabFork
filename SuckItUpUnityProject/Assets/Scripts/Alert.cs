@@ -58,6 +58,8 @@ public class Alert : MonoBehaviour
 	// Display HUD values
 	private void OnGUI()
 	{
+		// GUI font skin set by Pause.cs script
+
 		// if text is not empty, display it
 		if (HUDtext != "")
 		{

@@ -22,7 +22,7 @@ There is no table of contents, because we want folks to read the whole thing! (T
 1. Go to the organization and do any setup you may be prompted to do. 
 1. Do NOT setup 2-factor authentication, even if prompted to do so. 
 1. Go to the Repository for the class code at https://github.com/MART450Spring/SuckItUpGame
-1. Click the green **Code** button and copy the HTTPS URL. Save it somewhere, or just remember how to get it.
+1. Click the green **Code** button and copy the HTTPS URL. Save it somewhere for later, or just remember how to get it.
 
 Note: Even if you have a GitHub account, join via the invitation. 
 
@@ -53,7 +53,7 @@ An access token is a unique and complex passcode.
 
 1. Go to https://git-scm.com/download/win and follow the instructions and make choices:
 
-* Select components pane: Make sure GIT LFS is checked.
+* Select components pane: Make sure GIT LFS is NOT checked. Uncheck if necessary.
 * When given the choice, do create the Desktop shortcut.
 * When asked to choose a (text/code) editor, choose an editor you are familiar with and that you have.
 * When prompted, !! Make sure you Override the default branch name and call it main.
@@ -62,7 +62,6 @@ An access token is a unique and complex passcode.
 
 1. When done, open Git Bash (from the Desktop shortcut that was created). This is a console window to use with Git. 
 1. In the console, type `which git` followed by Enter. This should return a directory. 
-1. In the console, type `which git-lfs` followed by Enter. This should return a directory.
 
 That's it for now.
 
@@ -101,7 +100,9 @@ Then, working with GitHub Desktop:
 1. Paste the URL that you just copied from GitHub. 
 1. Set the local path for storing the project. That's, where you want the project to go on your computer.
 1. Click **Clone**. 
-1. You should get an **Initialize Git LFS** popup. DO NOT INITILIAZIE LFS (OK, nothing bad happens, but less potential for trouble.)
+1. You should get an **Initialize Git LFS** popup. Click **Not Now** as shown in the screenshot below. DO NOT INITILIAZIE LFS (OK, nothing bad happens, but less potential for trouble.)
+![image](https://user-images.githubusercontent.com/7841348/221072028-2de35707-1ffb-4590-8435-a574f3e7f15a.png)
+
 
 This is what it should look like. 
 ![image](https://user-images.githubusercontent.com/7841348/219176667-c00daaf6-195d-43d4-b11e-54b3da7a2d0a.png)

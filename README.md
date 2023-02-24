@@ -279,8 +279,28 @@ There are many more commands and terminology.
 * There is an extensive [Glossary of terms for GITHUB](https://docs.github.com/en/get-started/quickstart/github-glossary)... super technical.
 * [Git documentation](https://git-scm.com/doc) and [GitHub documentation](https://docs.github.com/en) are extensive and if you want to learn more on how it works, just start reading. There are also many, many tutorials on YouTube and other websites. 
 
-## FAQ - Questions answered as they show up...
+## Special Instructions for removing LFS tools from your Project
 
-* Nothing here yet....
+You only have to do this ONCE, to remove the LFS tools, and to get the non-lfs files. 
+
+1. Open your command line tool
+1. Use the `cd` command to go to your GIT project. (The folder/directory that has the .git file in it.)
+1. Enter `lfs uninstall`
+2. Enter 'git pull` and wait for the pull to finish. There should be no errors.
+3. Enter `git lfs ls-files` and the result should be an empty line.
+
+**If you have any trouble, either ask for help in Discord, or do this instead.**
+This basically starts from scratch with a new cloned project. 
+
+1. Delete your current project. (You have a backup of the assets your created, yes? Otherwise, make one now!)
+1. Yes, that's deleting the whole local project. You can just do that in your File Explorer/Finder.
+1. Open GitHub Desktop.
+1. It will probably ask you about a non-existin repo. Just tell it to remove it.
+1. Follow the instructions above for cloning the repository. It's Step 5.
+
+1. In your command line tool, go to the project directory.
+1. Enter `dgit lfs ls-files` and it should return an empty line.
+
+Done. 
 
 

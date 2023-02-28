@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 	CharacterController EnemyController;    // character controller for movement
 	CameraShake cameraShake;                // to make Main Camera shake
 	bool bAlive;                            // is enemy alive
+	Patrol patrol; 
 
 	// Start is called before the first frame update
 	void Start()
@@ -23,9 +24,11 @@ public class Enemy : MonoBehaviour
 		TargetObject = GameObject.FindGameObjectWithTag("Player");
 		EnemyController = GetComponent<CharacterController>();
 		AudioIndex = SoundBoard.Instance.AddSoundEffect(MyDeathSFX);
-		camera = GameObject.Find("Main Camera");
-		cameraShake = camera.GetComponent<CameraShake>();
+		//camera = GameObject.Find("Main Camera");
+		//cameraShake = camera.GetComponent<CameraShake>();
+		cameraShake = Camera.main.gameObject.GetComponent<CameraShake>();
 		bAlive = true;
+		patrol = GetComponent<Patrol>();
 	}
 
 	// Update is called once per frame
@@ -36,6 +39,7 @@ public class Enemy : MonoBehaviour
 		// stay at location until Player moves into AlertDistance
 		if (TargetDistance <= AlertDistance)
 		{
+			if (patrol && patrol.enabled) patrol.enabled = false;
 			// look at target X & Z, but enemy's Y
 			Vector3 myLookVec = TargetObject.transform.position;
 			myLookVec.y = transform.position.y;
@@ -50,6 +54,13 @@ public class Enemy : MonoBehaviour
 
 			// move in the forward facing direction (already rotated toward player), by moveSpeed
 			EnemyController.Move(moveVector);
+            
+
+            
+		}
+		else
+        {
+			if (patrol && patrol.enabled == false) patrol.enabled = true;
 		}
 	}
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3256060965910623350}
   - component: {fileID: 777765369406210236}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: Zombie Patrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

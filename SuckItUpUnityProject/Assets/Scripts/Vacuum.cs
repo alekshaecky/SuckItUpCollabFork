@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Vacuum : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class Vacuum : MonoBehaviour
             RaycastHit hit;
             Ray ray = new Ray(transform.position, transform.forward);
 
-            //Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
+            Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -44,39 +45,59 @@ public class Vacuum : MonoBehaviour
                     hit.rigidbody.AddForceAtPosition(ray.direction * suckForce * -1.0f, hit.point);
                 }
                 else
-				{
+                {
                     //Debug.Log("Not rigidbody");
-				}
+                }
             }
             else
-			{
+            {
                 //Debug.Log("No object hit");
-			}
+            }
         }
     }
 
-	private void OnTriggerEnter(Collider other)
-	{
+    private void OnTriggerEnter(Collider other)
+    {
+        Rigidbody rb;
+
         //Debug.Log("Triggered by " + other.gameObject.name);
 
-        // if we are actually vacuuming then test if "other" is suckable
-        if (Input.GetButton("Fire1"))
+        // get the objects rigidbody
+        rb = other.gameObject.GetComponent<Rigidbody>();
+        // if it has a rigidbody
+        if (rb != null)
         {
-            // get the objects rigidbody
-            Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
-            // if it has a rigidbody
-            if (rb != null)
+            // see if rigidbody is affected by physics
+            if (rb.isKinematic == false)
             {
-                // see if rigidbody is affected by physics
-                if (rb.isKinematic == false)
-                {
-                    int ScoreAmount = PlayerPrefs.GetInt("PrefsTempScore");
-                    ScoreAmount += (int)(rb.mass);
-                    PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
-                    PlayerPrefs.Save();
-                    Destroy(other.gameObject);
-                }
+                StartCoroutine(ScaleToTargetCoroutine(rb, new Vector3(0.1f, 0.1f, 0.1f), 0.5f));
             }
-		}
+        }
+    }
+
+    private IEnumerator ScaleToTargetCoroutine(Rigidbody rbody, Vector3 targetScale, float duration)
+    {
+        Vector3 startScale = transform.localScale;
+        float timer = 0.0f;
+        GameObject gObject;
+
+        gObject = rbody.gameObject;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / duration;
+            //smoother step algorithm
+            t = t * t * t * (t * (6f * t - 15f) + 10f); // magic here???
+            gObject.transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+            yield return null;
+        }
+
+        int ScoreAmount = PlayerPrefs.GetInt("PrefsTempScore");
+        ScoreAmount += (int)(rbody.mass);
+        PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
+        PlayerPrefs.Save();
+        Destroy(gObject);
+        yield return null;
     }
 }

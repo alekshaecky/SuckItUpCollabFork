@@ -9,7 +9,7 @@ public class Vacuum : MonoBehaviour
     // The force with which the target is "poked" when hit.
     public float suckForce;
 
-    AudioClip VacuumSFX;                   // vacuum sound
+    public AudioClip VacuumSFX;                   // vacuum sound
     int AudioIndex;                  // SoundBoard audio index
 
     // Start is called before the first frame update
@@ -24,11 +24,13 @@ public class Vacuum : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             SoundBoard.Instance.PlaySFX(AudioIndex);    // needs a parameter for looping 
+            SoundBoard.Instance.PlayLoopedSFX(AudioIndex);
         }
 
         if (Input.GetButtonUp("Fire1"))
         {
             // needs a parameter for stopping a sound that is playing by index
+            SoundBoard.Instance.StopLoopedSFX(AudioIndex);
         }
 
         if (Input.GetButton("Fire1"))

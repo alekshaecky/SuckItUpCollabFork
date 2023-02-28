@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1802843, g: 0.22571497, b: 0.30692366, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028404, g: 0.22571458, b: 0.30692294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1068,8 +1068,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 858876959601197983, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+      propertyPath: audioLoopedSFX
+      value: 
+      objectReference: {fileID: 169359010}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+--- !u!82 &169359010 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858876959601197981, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+  m_PrefabInstance: {fileID: 169359009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &172333504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5626770929438313477, guid: c2bf85be00f7077489e2fc5107cd5df5, type: 3}
@@ -2303,6 +2312,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 451168051, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: VacuumSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: c393b9659967b41fabda4354f1eff438, type: 3}
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Name
       value: First Person Controller

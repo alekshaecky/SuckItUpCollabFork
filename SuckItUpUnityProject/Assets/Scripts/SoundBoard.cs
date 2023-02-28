@@ -18,7 +18,9 @@ public class SoundBoard : MonoBehaviour
 
     public static SoundBoard Instance { get; private set; }
 
-	private void Awake()
+    public AudioSource audioLoopedSFX;
+
+    private void Awake()
 	{
 		if (Instance != null && Instance != this)
 		{
@@ -66,11 +68,33 @@ public class SoundBoard : MonoBehaviour
     {
         Debug.Log("Play Music: " + music.name);
         audioMusic.loop = true;         // always loop music
-        audioMusic.volume = 0.25f;      // quite music
+        audioMusic.volume = 0.25f;      // quiet music
         audioMusic.clip = music;        // which clip to play
         if (!bPaused)
         {
             audioMusic.Play();
+        }
+    }
+
+    // call this to play the looping sound effect
+    public void PlayLoopedSFX(int index, float volume = 0.5f)
+    {
+        if ((index >= 0) && !bPaused && (index < SoundEffects.Count))
+        {
+            Debug.Log("Play Vacuum sound: " + audioLoopedSFX.name);
+            audioLoopedSFX.loop = true;         // always loop this SFX
+            audioLoopedSFX.volume = 0.5f;         // quiet sound SFX
+            audioLoopedSFX.PlayOneShot(SoundEffects[index], volume);
+        }
+    }
+
+    // call this to stop the looping sound effect
+    public void StopLoopedSFX(int index, float volume = 0.5f)
+    {
+        if ((index >= 0) && !bPaused && (index < SoundEffects.Count))
+        {
+            Debug.Log("Stop Vacuum sound: " + audioLoopedSFX.name);
+            audioLoopedSFX.Stop();         // stop this SFX
         }
     }
 

@@ -38,10 +38,14 @@ public class Alert : MonoBehaviour
 	private void Update()
 	{
 		// any button or key will clear the alert
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.anyKeyDown)
 		{
-			SoundBoard.Instance.PlaySFX(indexSFX);
-			HUDtext = "";
+			// if text is not empty, play SFX and empty string
+			if (HUDtext != "")
+			{
+				SoundBoard.Instance.PlaySFX(indexSFX);
+				HUDtext = "";
+			}
 		}
 	}
 
@@ -54,6 +58,8 @@ public class Alert : MonoBehaviour
 	// Display HUD values
 	private void OnGUI()
 	{
+		// GUI font skin set by Pause.cs script
+
 		// if text is not empty, display it
 		if (HUDtext != "")
 		{

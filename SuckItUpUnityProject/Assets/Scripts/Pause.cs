@@ -14,12 +14,17 @@ public class Pause : MonoBehaviour
 	public GUIStyle PauseStyle;       // set the text style of the frame counter
 	[HideInInspector]
 	public GUIStyle HowToStyle;
+	public GUIStyle GamePausedStyle;
 	[HideInInspector]
-	public GUIStyle ButtonStyle;       // set the text style of the frame counter
-	public Texture2D ButtonImg;
+	public GUIStyle ButtonStyle1;       // set the text style of the frame counter
+	public Texture2D ButtonImg1;
+
+	public GUIStyle ButtonStyle2;       // set the text style of the frame counter
+	public Texture2D ButtonImg2;
 
 	public AudioClip ButtonSFX;
 	public int indexSFX;
+	public Font guiFont;            // default font to use for OnGui elements
 
 	void Start()
 	{
@@ -28,12 +33,24 @@ public class Pause : MonoBehaviour
 		HowToStyle.normal.textColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);  // text color white White
 		HowToStyle.wordWrap = true;
 
-		ButtonStyle.alignment = TextAnchor.MiddleCenter;    // sets button text flow to middle centered
-		ButtonStyle.fontSize = 40;                          // font size is 40 pixels
-		ButtonStyle.fontStyle = FontStyle.Bold;
-		ButtonStyle.normal.textColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);   // text color is solid white
-		ButtonStyle.normal.background = (Texture2D)Resources.GetBuiltinResource(typeof(Texture2D), "GameSkin/button.png");  // use a default button
-		ButtonStyle.normal.background = ButtonImg;  // use custom button
+		GamePausedStyle.alignment = TextAnchor.UpperCenter;      // sets text flow left to right from top
+		GamePausedStyle.fontSize = 120;                         // font size to 40 (for HD display
+		GamePausedStyle.normal.textColor = new Color(0.0f, 1.0f, 1.0f, 1.0f);  // text color Light Blue
+		GamePausedStyle.wordWrap = true;
+
+		ButtonStyle1.alignment = TextAnchor.MiddleCenter;    // sets button text flow to middle centered
+		ButtonStyle1.fontSize = 40;                          // font size is 40 pixels
+		ButtonStyle1.fontStyle = FontStyle.Bold;
+		ButtonStyle1.normal.textColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);   // text color is solid white
+		ButtonStyle1.normal.background = (Texture2D)Resources.GetBuiltinResource(typeof(Texture2D), "GameSkin/button.png");  // use a default button
+		ButtonStyle1.normal.background = ButtonImg1;  // use custom button
+
+		ButtonStyle2.alignment = TextAnchor.MiddleCenter;    // sets button text flow to middle centered
+		ButtonStyle2.fontSize = 40;                          // font size is 40 pixels
+		ButtonStyle2.fontStyle = FontStyle.Bold;
+		ButtonStyle2.normal.textColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);   // text color is solid white
+		ButtonStyle2.normal.background = (Texture2D)Resources.GetBuiltinResource(typeof(Texture2D), "GameSkin/button.png");  // use a default button
+		ButtonStyle2.normal.background = ButtonImg2;  // use custom button
 
 		// process string and display
 		string temp;
@@ -87,6 +104,13 @@ public class Pause : MonoBehaviour
 
 	void OnGUI()
 	{
+		if (guiFont != null)
+		{
+			// sets the global font used by OnGUI() UI stuff
+			GUI.skin.font = guiFont;
+			Debug.Log("Set font to " + guiFont.name);
+		}
+
 		if (bPaused)
 		{
 			//Calculate change aspects
@@ -98,15 +122,19 @@ public class Pause : MonoBehaviour
 
 			GUI.Box(new Rect(0, 0, 1920f, 1080f), "");                   // displays default GUI box without header
 
-			GUI.Label(new Rect(10, 10, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
+			GUI.Label(new Rect(10, 225, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
 
-			if (GUI.Button(new Rect(1920f / 2 - 140, 1080f * 0.75f + 10, 280, 80), "MENU", ButtonStyle))
+			GUI.Box(new Rect(0, 0, 1920f, 1080f), "");                   // displays default GUI box without header
+
+			GUI.Label(new Rect(10, 40, 1920f - 20f, 1080f * 0.75f), "Game Paused", GamePausedStyle);
+
+			if (GUI.Button(new Rect(1920f / 2 - 140, 1080f * 0.75f + -200, 280, 145), " ", ButtonStyle2))  // Quit to Main Menu Button
 			{
 				UnPause();
 				SoundBoard.Instance.PlaySFX(indexSFX);
 				SceneManager.LoadScene(0);  // quit to menu
 			}
-			if (GUI.Button(new Rect(1920f / 2 - 140, 1080f * 0.75f + 115, 280, 80), "RESUME", ButtonStyle))
+			if (GUI.Button(new Rect(1920f / 2 - 140, 1080f * 0.75f + -400, 280, 145), " ", ButtonStyle1))  // Resume game Button
 			{
 				UnPause();                  // resume game
 				SoundBoard.Instance.PlaySFX(indexSFX);

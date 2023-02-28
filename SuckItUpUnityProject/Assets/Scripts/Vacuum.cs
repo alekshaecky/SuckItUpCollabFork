@@ -35,7 +35,7 @@ public class Vacuum : MonoBehaviour
             RaycastHit hit;
             Ray ray = new Ray(transform.position, transform.forward);
 
-            Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
+            //Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -57,23 +57,25 @@ public class Vacuum : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-        Rigidbody rb;
-
         //Debug.Log("Triggered by " + other.gameObject.name);
 
-        // get the objects rigidbody
-        rb = other.gameObject.GetComponent<Rigidbody>();
-        // if it has a rigidbody
-        if (rb != null)
+        // if we are actually vacuuming then test if "other" is suckable
+        if (Input.GetButton("Fire1"))
         {
-            // see if rigidbody is affected by physics
-            if (rb.isKinematic == false)
+            // get the objects rigidbody
+            Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
+            // if it has a rigidbody
+            if (rb != null)
             {
-                int ScoreAmount = PlayerPrefs.GetInt("PrefsTempScore");
-                ScoreAmount += (int)(rb.mass);
-                PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
-                PlayerPrefs.Save();
-                Destroy(other.gameObject);
+                // see if rigidbody is affected by physics
+                if (rb.isKinematic == false)
+                {
+                    int ScoreAmount = PlayerPrefs.GetInt("PrefsTempScore");
+                    ScoreAmount += (int)(rb.mass);
+                    PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
+                    PlayerPrefs.Save();
+                    Destroy(other.gameObject);
+                }
             }
 		}
     }

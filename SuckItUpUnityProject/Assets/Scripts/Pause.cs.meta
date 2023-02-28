@@ -3,7 +3,11 @@ guid: 14760bd72094b5a4f824e363bed5b85e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ButtonImg1: {fileID: 2800000, guid: e9539c5bfd536c24492d2c26e24930cc, type: 3}
+  - ButtonImg2: {fileID: 2800000, guid: 0afff1a17ca1f354db9e54b88ba37f18, type: 3}
+  - ButtonSFX: {instanceID: 0}
+  - guiFont: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

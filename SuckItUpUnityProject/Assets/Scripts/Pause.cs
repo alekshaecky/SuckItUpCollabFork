@@ -120,13 +120,9 @@ public class Pause : MonoBehaviour
 			//Set matrix
 			GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(resX, resY, 1));
 
-			GUI.Box(new Rect(0, 0, 1920f, 1080f), "");                   // displays default GUI box without header
+			GUI.Box(new Rect(0, 0, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
 
 			GUI.Label(new Rect(10, 225, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
-
-			GUI.Box(new Rect(0, 0, 1920f, 1080f), "");                   // displays default GUI box without header
-
-			GUI.Label(new Rect(10, 40, 1920f - 20f, 1080f * 0.75f), "Game Paused", GamePausedStyle);
 
 			if (GUI.Button(new Rect(1920f / 2 - 140, 1080f * 0.75f + -200, 280, 145), " ", ButtonStyle2))  // Quit to Main Menu Button
 			{

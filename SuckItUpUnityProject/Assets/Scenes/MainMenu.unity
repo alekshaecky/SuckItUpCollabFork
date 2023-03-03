@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 199133530}
   - component: {fileID: 199133529}
   - component: {fileID: 199133528}
-  - component: {fileID: 199133527}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -143,20 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &199133527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199133526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2184cac30f1904d8e9d1f30b0adceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScrollU: 0.05
-  ScrollV: 0.05
 --- !u!64 &199133528
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -191,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e94a1f85efd83e42a345490f191d4dc, type: 2}
+  - {fileID: 2100000, guid: 96d783d02d5a42c4fa0c81f64535c88a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -265,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220a071e2f88dbf4ab5bd80dc2496094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMusic: {fileID: 8300000, guid: 214886d13d04b584fbedc61eb763dcd9, type: 3}
+  gameMusic: {fileID: 8300000, guid: 6103460861c417a44b3af7c06ccb60e6, type: 3}
 --- !u!4 &255965882
 Transform:
   m_ObjectHideFlags: 0
@@ -529,14 +514,22 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132230192}
-  m_Text: By Student Names
+  m_Text: 'By Victor Murcia, Jesse Burden, Angel Camarena,
+
+    Luis Cruz-Alfaro,
+    Aleks Haecky, Rebecka Hammond,
+
+    Bradley Jauregui, Micahel Kapuniai, Melissa
+    Lara-Turcios,
+
+    Cassidy Nelson, Keenan Rae'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 16
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 87e931e5b2a99e14e9f5fb5e105ea15b, type: 3}
@@ -785,8 +778,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310418993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.59, z: -0.81}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.7, z: -0.81}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -945,7 +938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447601780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.379, z: -0.81}
+  m_LocalPosition: {x: 0, y: -0.5, z: -0.81}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -106,7 +106,10 @@ public class Vacuum : MonoBehaviour
         ScoreAmount += (int)(rbody.mass);
         PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
         PlayerPrefs.Save();
-        Destroy(gObject);
+        if (gObject != null)
+        {
+            Destroy(gObject);
+        }
         yield return null;
     }
 }

@@ -178,8 +178,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 858876959601197983, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+      propertyPath: audioLoopedSFX
+      value: 
+      objectReference: {fileID: 169359010}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+--- !u!82 &169359010 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858876959601197981, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+  m_PrefabInstance: {fileID: 169359009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &273048058
 GameObject:
   m_ObjectHideFlags: 0

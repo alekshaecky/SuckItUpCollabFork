@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -847,6 +847,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 858876959601197983, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+      propertyPath: audioLoopedSFX
+      value: 
+      objectReference: {fileID: 1686798040}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
 --- !u!1 &1447601780
@@ -962,6 +966,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonSFX: {fileID: 8300000, guid: d1ff27dc37ee2c843bf189caf094385f, type: 3}
   indexSFX: 0
+--- !u!82 &1686798040 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858876959601197981, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+  m_PrefabInstance: {fileID: 1440540250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2039581105
 GameObject:
   m_ObjectHideFlags: 0

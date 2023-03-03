@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/DeviceInfo.unity
     guid: c4b4c026a1771c948b0b98256b396e27
   - enabled: 1
-    path: Assets/Scenes/Prototype.unity
-    guid: a59a3278a525baa40bba5712a1a8990e
-  - enabled: 1
     path: Assets/Scenes/HUB.unity
     guid: 939475b96f9585a49b126672fbf62c32
   - enabled: 1

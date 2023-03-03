@@ -104,7 +104,7 @@ public class Pause : MonoBehaviour
 
 	void OnGUI()
 	{
-		if (guiFont != null)
+		if ((guiFont != null) && (GUI.skin.font != guiFont))
 		{
 			// sets the global font used by OnGUI() UI stuff
 			GUI.skin.font = guiFont;

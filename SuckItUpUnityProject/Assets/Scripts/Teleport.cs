@@ -22,7 +22,7 @@ public class Teleport : MonoBehaviour
         }
         else
         {
-            Debug.Log("No target transform");
+            Debug.Log("No target transform for " + this.gameObject.name);
         }
     }
 }

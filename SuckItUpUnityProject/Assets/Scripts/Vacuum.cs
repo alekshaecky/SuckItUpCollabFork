@@ -10,12 +10,15 @@ public class Vacuum : MonoBehaviour
     public float suckForce;
 
     public AudioClip VacuumSFX;                   // vacuum sound
-    int AudioIndex;                  // SoundBoard audio index
+    int VacuumAudioIndex;                  // SoundBoard audio index
+    public AudioClip ObjectSuckedSFX;
+    int SuckedAudioIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        AudioIndex = SoundBoard.Instance.AddSoundEffect(VacuumSFX);
+        VacuumAudioIndex = SoundBoard.Instance.AddSoundEffect(VacuumSFX);
+        SuckedAudioIndex = SoundBoard.Instance.AddSoundEffect(ObjectSuckedSFX);
     }
 
     // Update is called once per frame
@@ -23,14 +26,14 @@ public class Vacuum : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            SoundBoard.Instance.PlaySFX(AudioIndex);    // needs a parameter for looping 
-            SoundBoard.Instance.PlayLoopedSFX(AudioIndex);
+            //SoundBoard.Instance.PlaySFX(AudioIndex);    // needs a parameter for looping 
+            SoundBoard.Instance.PlayLoopedSFX(VacuumAudioIndex);
         }
 
         if (Input.GetButtonUp("Fire1"))
         {
             // needs a parameter for stopping a sound that is playing by index
-            SoundBoard.Instance.StopLoopedSFX(AudioIndex);
+            SoundBoard.Instance.StopLoopedSFX();
         }
 
         if (Input.GetButton("Fire1"))
@@ -72,7 +75,7 @@ public class Vacuum : MonoBehaviour
             // see if rigidbody is affected by physics
             if (rb.isKinematic == false)
             {
-                StartCoroutine(ScaleToTargetCoroutine(rb, new Vector3(0.1f, 0.1f, 0.1f), 0.5f));
+                StartCoroutine(ScaleToTargetCoroutine(rb, new Vector3(0.1f, 0.1f, 0.1f), 0.25f));
             }
         }
     }
@@ -84,6 +87,7 @@ public class Vacuum : MonoBehaviour
         GameObject gObject;
 
         gObject = rbody.gameObject;
+        SoundBoard.Instance.PlaySFX(SuckedAudioIndex);
 
         while (timer < duration)
         {
@@ -91,7 +95,10 @@ public class Vacuum : MonoBehaviour
             float t = timer / duration;
             //smoother step algorithm
             t = t * t * t * (t * (6f * t - 15f) + 10f); // magic here???
-            gObject.transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+            if (gObject != null)
+            {
+                gObject.transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+            }
             yield return null;
         }
 

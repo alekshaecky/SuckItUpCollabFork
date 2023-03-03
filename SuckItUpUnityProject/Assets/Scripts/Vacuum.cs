@@ -65,17 +65,21 @@ public class Vacuum : MonoBehaviour
     {
         Rigidbody rb;
 
-        //Debug.Log("Triggered by " + other.gameObject.name);
-
-        // get the objects rigidbody
-        rb = other.gameObject.GetComponent<Rigidbody>();
-        // if it has a rigidbody
-        if (rb != null)
+        // only allow triggering when actually vacuuming
+        if (Input.GetButton("Fire1"))
         {
-            // see if rigidbody is affected by physics
-            if (rb.isKinematic == false)
+            //Debug.Log("Triggered by " + other.gameObject.name);
+
+            // get the objects rigidbody
+            rb = other.gameObject.GetComponent<Rigidbody>();
+            // if it has a rigidbody
+            if (rb != null)
             {
-                StartCoroutine(ScaleToTargetCoroutine(rb, new Vector3(0.1f, 0.1f, 0.1f), 0.25f));
+                // see if rigidbody is affected by physics
+                if (rb.isKinematic == false)
+                {
+                    StartCoroutine(ScaleToTargetCoroutine(rb, new Vector3(0.1f, 0.1f, 0.1f), 0.25f));
+                }
             }
         }
     }

@@ -107,7 +107,10 @@ public class Vacuum : MonoBehaviour
         }
 
         int ScoreAmount = PlayerPrefs.GetInt("PrefsTempScore");
-        ScoreAmount += (int)(rbody.mass);
+        if (rbody != null)
+        {
+            ScoreAmount += (int)(rbody.mass);
+        }
         PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
         PlayerPrefs.Save();
         if (gObject != null)

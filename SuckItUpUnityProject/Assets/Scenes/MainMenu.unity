@@ -1075,5 +1075,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6091e69bd9b01843a9d1dd34825d2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonSFX: {fileID: 8300000, guid: d7cc049398ad85642b502977e17f7689, type: 3}
+  ButtonSFX: {fileID: 8300000, guid: 8e88a24d32c3f814fac7729eb0ff12e2, type: 3}
   indexSFX: 0

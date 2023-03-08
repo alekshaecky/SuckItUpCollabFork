@@ -9,6 +9,7 @@
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*
 **/build_info
+**/build_info.meta
 **/WebGLBuilds
 **/connectwebgl.zip
 **/webgl_sharing

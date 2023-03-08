@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 199133530}
   - component: {fileID: 199133529}
   - component: {fileID: 199133528}
-  - component: {fileID: 199133527}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -143,20 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &199133527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199133526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2184cac30f1904d8e9d1f30b0adceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScrollU: 0.05
-  ScrollV: 0.05
 --- !u!64 &199133528
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -191,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a050c626268a8347baa800523f8c51e, type: 2}
+  - {fileID: 2100000, guid: 96d783d02d5a42c4fa0c81f64535c88a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -265,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220a071e2f88dbf4ab5bd80dc2496094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMusic: {fileID: 8300000, guid: 214886d13d04b584fbedc61eb763dcd9, type: 3}
+  gameMusic: {fileID: 8300000, guid: 04ed849f80ff1e64691e102b54ad2d4f, type: 3}
 --- !u!4 &255965882
 Transform:
   m_ObjectHideFlags: 0
@@ -529,14 +514,22 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132230192}
-  m_Text: By Student Names
+  m_Text: 'By Victor Arroyo, Jesse Burden, Angel Camarena,
+
+    Luis Cruz-Alfaro,
+    Aleks Haecky, Rebecka Hammond,
+
+    Bradley Jauregui, Micahel Kapuniai, Melissa
+    Lara-Turcios,
+
+    Cassidy Nelson, Keenan Rae'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 16
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 87e931e5b2a99e14e9f5fb5e105ea15b, type: 3}
@@ -785,8 +778,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310418993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.59, z: -0.81}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.7, z: -0.81}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -847,6 +840,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 858876959601197983, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+      propertyPath: audioLoopedSFX
+      value: 
+      objectReference: {fileID: 1686798040}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
 --- !u!1 &1447601780
@@ -941,7 +938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447601780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.379, z: -0.81}
+  m_LocalPosition: {x: 0, y: -0.5, z: -0.81}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -962,6 +959,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonSFX: {fileID: 8300000, guid: d1ff27dc37ee2c843bf189caf094385f, type: 3}
   indexSFX: 0
+--- !u!82 &1686798040 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858876959601197981, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
+  m_PrefabInstance: {fileID: 1440540250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2039581105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,5 +1075,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6091e69bd9b01843a9d1dd34825d2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonSFX: {fileID: 8300000, guid: d7cc049398ad85642b502977e17f7689, type: 3}
+  ButtonSFX: {fileID: 8300000, guid: 8e88a24d32c3f814fac7729eb0ff12e2, type: 3}
   indexSFX: 0

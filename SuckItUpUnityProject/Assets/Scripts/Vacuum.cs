@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Vacuum : MonoBehaviour
 {
@@ -8,13 +9,20 @@ public class Vacuum : MonoBehaviour
     // The force with which the target is "poked" when hit.
     public float suckForce;
 
-    AudioClip VacuumSFX;                   // vacuum sound
-    int AudioIndex;                  // SoundBoard audio index
+    public GameObject SuckVFX;
+    public GameObject TrackVFX;
+    public GameObject NozzleSmokeVFX;
+
+    public AudioClip VacuumSFX;                   // vacuum sound
+    int VacuumAudioIndex;                  // SoundBoard audio index
+    public AudioClip ObjectSuckedSFX;
+    int SuckedAudioIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        AudioIndex = SoundBoard.Instance.AddSoundEffect(VacuumSFX);
+        VacuumAudioIndex = SoundBoard.Instance.AddSoundEffect(VacuumSFX);
+        SuckedAudioIndex = SoundBoard.Instance.AddSoundEffect(ObjectSuckedSFX);
     }
 
     // Update is called once per frame
@@ -22,12 +30,22 @@ public class Vacuum : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            SoundBoard.Instance.PlaySFX(AudioIndex);    // needs a parameter for looping 
+            //SoundBoard.Instance.PlaySFX(AudioIndex);    // needs a parameter for looping 
+            SoundBoard.Instance.PlayLoopedSFX(VacuumAudioIndex);
+            // Show Nozzle Effect
+            if (SuckVFX) SuckVFX.SetActive(true);
+            if (TrackVFX) TrackVFX.SetActive(true);
+            if (NozzleSmokeVFX) NozzleSmokeVFX.SetActive(false);
         }
 
         if (Input.GetButtonUp("Fire1"))
         {
             // needs a parameter for stopping a sound that is playing by index
+            SoundBoard.Instance.StopLoopedSFX();
+            // Hide Nozzle Effect
+            if (SuckVFX) SuckVFX.SetActive(false);
+            if (TrackVFX) TrackVFX.SetActive(false);
+            if (NozzleSmokeVFX) NozzleSmokeVFX.SetActive(true);
         }
 
         if (Input.GetButton("Fire1"))
@@ -35,7 +53,7 @@ public class Vacuum : MonoBehaviour
             RaycastHit hit;
             Ray ray = new Ray(transform.position, transform.forward);
 
-            //Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
+            Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -44,39 +62,73 @@ public class Vacuum : MonoBehaviour
                     hit.rigidbody.AddForceAtPosition(ray.direction * suckForce * -1.0f, hit.point);
                 }
                 else
-				{
+                {
                     //Debug.Log("Not rigidbody");
-				}
+                }
             }
             else
-			{
+            {
                 //Debug.Log("No object hit");
-			}
+            }
         }
     }
 
-	private void OnTriggerEnter(Collider other)
-	{
-        //Debug.Log("Triggered by " + other.gameObject.name);
+    private void OnTriggerEnter(Collider other)
+    {
+        Rigidbody rb;
 
-        // if we are actually vacuuming then test if "other" is suckable
+        // only allow triggering when actually vacuuming
         if (Input.GetButton("Fire1"))
         {
+            //Debug.Log("Triggered by " + other.gameObject.name);
+
             // get the objects rigidbody
-            Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
+            rb = other.gameObject.GetComponent<Rigidbody>();
             // if it has a rigidbody
             if (rb != null)
             {
                 // see if rigidbody is affected by physics
                 if (rb.isKinematic == false)
                 {
-                    int ScoreAmount = PlayerPrefs.GetInt("PrefsTempScore");
-                    ScoreAmount += (int)(rb.mass);
-                    PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
-                    PlayerPrefs.Save();
-                    Destroy(other.gameObject);
+                    StartCoroutine(ScaleToTargetCoroutine(rb, new Vector3(0.1f, 0.1f, 0.1f), 0.25f));
                 }
             }
-		}
+        }
+    }
+
+    private IEnumerator ScaleToTargetCoroutine(Rigidbody rbody, Vector3 targetScale, float duration)
+    {
+        Vector3 startScale = transform.localScale;
+        float timer = 0.0f;
+        GameObject gObject;
+
+        gObject = rbody.gameObject;
+        SoundBoard.Instance.PlaySFX(SuckedAudioIndex);
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / duration;
+            //smoother step algorithm
+            t = t * t * t * (t * (6f * t - 15f) + 10f); // magic here???
+            if (gObject != null)
+            {
+                gObject.transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+            }
+            yield return null;
+        }
+
+        int ScoreAmount = PlayerPrefs.GetInt("PrefsTempScore");
+        if (rbody != null)
+        {
+            ScoreAmount += (int)(rbody.mass);
+        }
+        PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
+        PlayerPrefs.Save();
+        if (gObject != null)
+        {
+            Destroy(gObject);
+        }
+        yield return null;
     }
 }

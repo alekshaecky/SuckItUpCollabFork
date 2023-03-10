@@ -5,17 +5,21 @@ public class JunkMeter : MonoBehaviour
 {
 	public Texture2D JunkMeterTexture;
 	public int JunkCapacity; 				// it would be good to scale this as the nozzle is upgraded
+	public int NozzelLevel; 				// the level of the players Nozzel 
+	public int piecesOfJunk; 
 
 	// Use this for initialization
 	void Start()
 	{
-		JunkCapacity = 30;
+		NozzelLevel = 100;
+		JunkCapacity = 10^(1+NozzelLevel);
+		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-
+		
 	}
 
 	// Initialize GUI
@@ -33,6 +37,6 @@ public class JunkMeter : MonoBehaviour
 		int tempScore = PlayerPrefs.GetInt("PrefsTempScore");
 
 		GUI.Box(HUDrect, "");                   // displays default GUI box without header around meter
-		GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 5, (HUDrect.width - 10) * tempScore / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
+		GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 5, (HUDrect.width - piecesOfJunk) * tempScore / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
 	}
 }

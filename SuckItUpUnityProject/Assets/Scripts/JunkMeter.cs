@@ -5,15 +5,15 @@ public class JunkMeter : MonoBehaviour
 {
 	public Texture2D JunkMeterTexture;
 	public int JunkCapacity; 				// it would be good to scale this as the nozzle is upgraded
-	public int NozzelLevel; 				// the level of the players Nozzel 
+	public int NozzleLevel; 				
 	public int piecesOfJunk; 
 
 	// Use this for initialization
 	void Start()
 	{
-		NozzelLevel = 100;
-		JunkCapacity = 10^(1+NozzelLevel);
-		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");
+		NozzleLevel = 100;                                       // The level of the players nozzle 
+		JunkCapacity = 10^(1+NozzleLevel);
+		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");   // Gets the max score value (# of Junk in Level)
 	}
 
 	// Update is called once per frame

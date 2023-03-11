@@ -13429,7 +13429,8 @@ GameObject:
   - component: {fileID: 7415014248620599273}
   - component: {fileID: 6739893167047518960}
   - component: {fileID: 514010300009836188}
-  - component: {fileID: 228521672190796709}
+  - component: {fileID: 9111162208333641986}
+  - component: {fileID: 619588379189148898}
   m_Layer: 0
   m_Name: FullBookcase1
   m_TagString: Untagged
@@ -22551,8 +22552,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7879812334999093497}
   m_Mesh: {fileID: 0}
---- !u!64 &228521672190796709
-MeshCollider:
+--- !u!65 &9111162208333641986
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22561,10 +22562,25 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.5136483, y: 0.3479898, z: 0.03851068}
+  m_Center: {x: -0.24317586, y: -0.19538957, z: 0.05313927}
+--- !u!54 &619588379189148898
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879812334999093497}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7949349650280668404
 GameObject:
   m_ObjectHideFlags: 0

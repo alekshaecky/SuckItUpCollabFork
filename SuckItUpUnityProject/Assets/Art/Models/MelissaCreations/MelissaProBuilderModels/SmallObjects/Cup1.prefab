@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4466792422661546910}
   - component: {fileID: 4466792422661546905}
   - component: {fileID: 4466792422661546904}
-  - component: {fileID: 4466792422661546907}
+  - component: {fileID: -4665601941355677643}
+  - component: {fileID: -8968448236851214282}
   m_Layer: 0
   m_Name: Cup1
   m_TagString: Untagged
@@ -28,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4466792422661546906}
-  m_LocalRotation: {x: -0, y: 0.8402928, z: -0, w: 0.54213285}
+  m_LocalRotation: {x: -0, y: 0.8321573, z: -0, w: 0.5545397}
   m_LocalPosition: {x: 4.99032, y: 0, z: -3.4149098}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 114.342, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 112.642, z: 0}
 --- !u!114 &4466792422661546911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18390,8 +18391,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4466792422661546906}
   m_Mesh: {fileID: 0}
---- !u!64 &4466792422661546907
-MeshCollider:
+--- !u!65 &-4665601941355677643
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -18400,7 +18401,22 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.2222062, y: 0.15683722, z: 0.12677798}
+  m_Center: {x: -0.09533884, y: 0.029251963, z: -0.056242}
+--- !u!54 &-8968448236851214282
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4466792422661546906}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

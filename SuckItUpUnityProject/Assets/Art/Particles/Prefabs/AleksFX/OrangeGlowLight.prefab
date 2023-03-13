@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 19889812}
   - component: {fileID: 19946638}
   m_Layer: 0
-  m_Name: BlueGlow
+  m_Name: OrangeGlowLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115658}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 10
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 1
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -849,7 +849,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1287,9 +1287,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.043137256, g: 0.4862745, b: 1, a: 0}
-        key1: {r: 0.105882354, g: 0.91764706, b: 0.90588236, a: 0.80784315}
-        key2: {r: 0.15294118, g: 0.89411765, b: 1, a: 0}
+        key0: {r: 1, g: 0.46472183, b: 0.043137252, a: 0}
+        key1: {r: 0.91764706, g: 0.5729718, b: 0.10588232, a: 0.80784315}
+        key2: {r: 1, g: 0.37095237, b: 0.15294117, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}

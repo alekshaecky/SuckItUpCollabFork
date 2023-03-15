@@ -12,6 +12,9 @@ public class Vacuum : MonoBehaviour
     public GameObject SuckVFX;
     public GameObject TrackVFX;
     public GameObject NozzleSmokeVFX;
+    public GameObject DustCloudPrefab;
+
+    private GameObject dustCloud;
 
     public AudioClip VacuumSFX;                   // vacuum sound
     int VacuumAudioIndex;                  // SoundBoard audio index
@@ -53,13 +56,19 @@ public class Vacuum : MonoBehaviour
             RaycastHit hit;
             Ray ray = new Ray(transform.position, transform.forward);
 
-            Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
+            //Debug.DrawLine(ray.origin, ray.GetPoint(10.0f));
 
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.rigidbody != null)
                 {
-                    hit.rigidbody.AddForceAtPosition(ray.direction * suckForce * -1.0f, hit.point);
+                    // Get the GameObject: hit.transform.gameObject;
+                    // Instantiate as child: public static Object Instantiate(Object original, Transform parent);
+                    if (DustCloudPrefab)
+                    {
+                        dustCloud = Instantiate(DustCloudPrefab, hit.transform);
+                    }
+                        hit.rigidbody.AddForceAtPosition(ray.direction * suckForce * -1.0f, hit.point);
                 }
                 else
                 {
@@ -125,6 +134,10 @@ public class Vacuum : MonoBehaviour
         }
         PlayerPrefs.SetInt("PrefsTempScore", ScoreAmount);
         PlayerPrefs.Save();
+        if (dustCloud != null)
+        {
+            Destroy(dustCloud);
+        }
         if (gObject != null)
         {
             Destroy(gObject);

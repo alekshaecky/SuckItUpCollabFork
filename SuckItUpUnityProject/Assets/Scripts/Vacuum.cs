@@ -13,6 +13,8 @@ public class Vacuum : MonoBehaviour
     public GameObject TrackVFX;
     public GameObject NozzleSmokeVFX;
     public GameObject DustCloudPrefab;
+    // TBD: These need to be instantiated instead of variables so we don't
+    // have to change it for every single level!
 
     private GameObject dustCloud;
 

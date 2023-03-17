@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8836494558558909728}
   m_Layer: 0
-  m_Name: HouseMikePrefab
+  m_Name: HousePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

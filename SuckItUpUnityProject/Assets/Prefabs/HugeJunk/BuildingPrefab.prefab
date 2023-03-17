@@ -959,7 +959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2254754174451687435}
   m_Layer: 0
-  m_Name: BuildingMikePrefab
+  m_Name: BuildingPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,6 +8,10 @@ public class Vacuum : MonoBehaviour
 
     // The force with which the target is "poked" when hit.
     public float suckForce;
+    public float setForce;
+    public float GetCapacity; // should use the PlayerPrefs.GetInt("PrefsCurrentVacuumPower") ???
+                              // and multiply that by a variable scaling factor ??
+                              // set in the inspector (like capacityMultiplier). ?
 
     public GameObject SuckVFX;
     public GameObject TrackVFX;
@@ -28,12 +32,18 @@ public class Vacuum : MonoBehaviour
     {
         VacuumAudioIndex = SoundBoard.Instance.AddSoundEffect(VacuumSFX);
         SuckedAudioIndex = SoundBoard.Instance.AddSoundEffect(ObjectSuckedSFX);
+        setForce = PlayerPrefs.GetInt("PrefsCurrentVacuumPower"); // times another variable scaling factor
+                                                                  // set in the inspector
+                                                                  // (like forceMultiplier). 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        int Capacity = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
+        int TempScore = PlayerPrefs.GetInt("PrefsTempScore");
+
+        if (Input.GetButtonDown("Fire1") && TempScore < Capacity)
         {
             //SoundBoard.Instance.PlaySFX(AudioIndex);    // needs a parameter for looping 
             SoundBoard.Instance.PlayLoopedSFX(VacuumAudioIndex);
@@ -70,7 +80,7 @@ public class Vacuum : MonoBehaviour
                     {
                         dustCloud = Instantiate(DustCloudPrefab, hit.transform);
                     }
-                        hit.rigidbody.AddForceAtPosition(ray.direction * suckForce * -1.0f, hit.point);
+                    hit.rigidbody.AddForceAtPosition(ray.direction * suckForce * -1.0f, hit.point);
                 }
                 else
                 {

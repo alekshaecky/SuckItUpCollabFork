@@ -11,9 +11,9 @@ public class JunkMeter : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		NozzleLevel = 100;                                       // The level of the players nozzle 
+		NozzleLevel = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");       // The level of the players nozzle 
 		JunkCapacity = 10^(1+NozzleLevel);
-		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");   // Gets the max score value (# of Junk in Level)
+		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");             // Gets the max score value (# of Junk in Level)
 	}
 
 	// Update is called once per frame

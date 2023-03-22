@@ -12,6 +12,7 @@ public class Vacuum : MonoBehaviour
     public float GetCapacity; // should use the PlayerPrefs.GetInt("PrefsCurrentVacuumPower") ???
                               // and multiply that by a variable scaling factor ??
                               // set in the inspector (like capacityMultiplier). ?
+    public float powerMultiplier;
 
     public GameObject SuckVFX;
     public GameObject TrackVFX;
@@ -26,24 +27,23 @@ public class Vacuum : MonoBehaviour
     int VacuumAudioIndex;                  // SoundBoard audio index
     public AudioClip ObjectSuckedSFX;
     int SuckedAudioIndex;
+    int Capacity;
 
     // Start is called before the first frame update
     void Start()
     {
         VacuumAudioIndex = SoundBoard.Instance.AddSoundEffect(VacuumSFX);
         SuckedAudioIndex = SoundBoard.Instance.AddSoundEffect(ObjectSuckedSFX);
-        setForce = PlayerPrefs.GetInt("PrefsCurrentVacuumPower"); // times another variable scaling factor
-                                                                  // set in the inspector
-                                                                  // (like forceMultiplier). 
+        Capacity = (int)Mathf.Pow(10, 1 + PlayerPrefs.GetInt("PrefsCurrentVacuumPower"));
+        setForce = PlayerPrefs.GetInt("PrefsCurrentVacuumPower") * powerMultiplier;
     }
 
     // Update is called once per frame
     void Update()
     {
-        int Capacity = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
         int TempScore = PlayerPrefs.GetInt("PrefsTempScore");
 
-        if (Input.GetButtonDown("Fire1") && TempScore < Capacity)
+        if (Input.GetButtonDown("Fire1") && (TempScore < Capacity))
         {
             //SoundBoard.Instance.PlaySFX(AudioIndex);    // needs a parameter for looping 
             SoundBoard.Instance.PlayLoopedSFX(VacuumAudioIndex);

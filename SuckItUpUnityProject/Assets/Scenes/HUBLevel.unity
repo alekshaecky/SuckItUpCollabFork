@@ -132,6 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1493878031579395154, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Name
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: ScienceLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
@@ -141,6 +142,17 @@ PrefabInstance:
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 654.36
+=======
+      value: PlaygroundDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.87
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.y
@@ -148,7 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: -1886.6
+=======
+      value: 9.16
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalRotation.w
@@ -180,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: DoorSceneIndex
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395167, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -188,7 +204,85 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: aac5dc00b9ffeb0459f459b6ff8aaf90, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
 --- !u!1 &13279945
+=======
+--- !u!4 &1414331 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+  m_PrefabInstance: {fileID: 1414330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &28106414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1594621712}
+    m_Modifications:
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6275091
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5434866
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.8340387
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854666703884835281, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: SignText
+      value: Geography -> Prototype
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124576681683969166, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_Name
+      value: Sign (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484736764228289883, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241d11d9743927e459816fe753615dee, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+--- !u!1 &121762995
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -537,19 +631,31 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
     m_TransformParent: {fileID: 691728930}
+=======
+    m_TransformParent: {fileID: 1625211440}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
     m_Modifications:
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       propertyPath: m_LocalScale.x
+=======
+      propertyPath: m_LocalScale.z
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: 1.6275091
+=======
+      value: -1.09
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -557,7 +663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: 4.8340387
+=======
+      value: -6.29
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -569,7 +679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: -0.7071068
+=======
+      value: -0
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -683,7 +797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 858876959601197980, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: 13
+=======
+      value: 9
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 858876959601197980, guid: ed68f97573d89c243a68a7b6986a2be9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -973,7 +1091,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_RootOrder: 10
+=======
+  m_RootOrder: 2
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &420987209
 GameObject:
@@ -1093,14 +1215,18 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &426615071
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
     m_TransformParent: {fileID: 1287232856}
+=======
+    m_TransformParent: {fileID: 2010968680}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
     m_Modifications:
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_RootOrder
@@ -1181,7 +1307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: 8
+=======
+      value: 4
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1352,14 +1482,56 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_RootOrder: 11
+=======
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &501502098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501502099}
+  m_Layer: 0
+  m_Name: Far away
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &501502099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501502098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 11, z: 50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2141436638}
+  - {fileID: 121762996}
+  - {fileID: 553744529}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &528724425
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
     m_TransformParent: {fileID: 2027096472}
+=======
+    m_TransformParent: {fileID: 1414331}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
     m_Modifications:
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_RootOrder
@@ -2005,7 +2177,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_RootOrder: 9
+=======
+  m_RootOrder: 1
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   m_LocalEulerAnglesHint: {x: -130, y: -30, z: 0}
 --- !u!4 &691728930 stripped
 Transform:
@@ -2112,7 +2288,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_Name: pb_Mesh-8132
+=======
+  m_Name: pb_Mesh-103182
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2280,7 +2460,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
     m_TransformParent: {fileID: 366957843}
+=======
+    m_TransformParent: {fileID: 1493878031375765798}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
     m_Modifications:
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_RootOrder
@@ -2412,7 +2596,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_Name: pb_Mesh-8144
+=======
+  m_Name: pb_Mesh-103194
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3069,11 +3257,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1493878031579395154, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Name
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: LibraryLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_RootOrder
       value: 4
+=======
+      value: ScienceDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3085,7 +3281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: -1886.6
+=======
+      value: 9.33
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3117,7 +3317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: DoorSceneIndex
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395167, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3125,8 +3325,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7e349f148a3a0444793bf29281fe44a6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
 --- !u!43 &1110393227
 Mesh:
+=======
+--- !u!4 &1084612443 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+  m_PrefabInstance: {fileID: 1084612442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1134229100
+GameObject:
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3295,7 +3505,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_Name: pb_Mesh-8120
+=======
+  m_Name: pb_Mesh-103170
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3463,7 +3677,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
     m_TransformParent: {fileID: 222089961}
+=======
+    m_TransformParent: {fileID: 1084612443}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
     m_Modifications:
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_RootOrder
@@ -4196,6 +4414,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1493878031579395154, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Name
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: LuisHullLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
@@ -4205,6 +4424,17 @@ PrefabInstance:
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 640.74
+=======
+      value: GeographyDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.43
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4212,7 +4442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: -1893.2325
+=======
+      value: 2.72
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4244,6 +4478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: DoorSceneIndex
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395167, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
@@ -4374,7 +4609,149 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: DoorSceneIndex
+=======
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395167, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 241d11d9743927e459816fe753615dee, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+--- !u!4 &1594621712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+  m_PrefabInstance: {fileID: 1594621711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1613609634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1493878031579395154, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_Name
+      value: LibraryDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: DoorSceneIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395167, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ca5f2dedf5c0b246be9dafc8ab69db2, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+--- !u!4 &1613609635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+  m_PrefabInstance: {fileID: 1613609634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1625211439
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1493878031579395154, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_Name
+      value: ArtDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.216792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7211601
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6927685
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -87.699
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: DoorSceneIndex
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395167, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4382,6 +4759,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1be39c52a89460749bdfc4786ab473d2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
 --- !u!43 &1637515184
 Mesh:
   m_ObjectHideFlags: 0
@@ -4546,6 +4924,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
+=======
+--- !u!4 &1625211440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+  m_PrefabInstance: {fileID: 1625211439}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
 --- !u!1 &1679691338
 GameObject:
   m_ObjectHideFlags: 0
@@ -4599,7 +4984,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
     m_TransformParent: {fileID: 1379900914}
+=======
+    m_TransformParent: {fileID: 1613609635}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
     m_Modifications:
     - target: {fileID: 2312432671966215732, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
       propertyPath: m_RootOrder
@@ -4663,13 +5052,118 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4ca5f2dedf5c0b246be9dafc8ab69db2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0775e95f52b46ad43a034e1bd323dfd1, type: 3}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
+=======
+--- !u!1 &1722744066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722744070}
+  - component: {fileID: 1722744069}
+  - component: {fileID: 1722744068}
+  - component: {fileID: 1722744067}
+  m_Layer: 4
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1722744067
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722744066}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 17ebab9f985bee0449919f28d35a602b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1722744068
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722744066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1722744069
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722744066}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1722744070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722744066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
 --- !u!43 &1762157997
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_Name: pb_Mesh-8156
+=======
+  m_Name: pb_Mesh-103206
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4841,11 +5335,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1493878031579395154, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Name
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: PlaygroundLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_RootOrder
       value: 3
+=======
+      value: CafeteriaDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4857,7 +5359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: -1886.6
+=======
+      value: 9.25
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4889,7 +5395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: DoorSceneIndex
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395167, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4897,13 +5403,22 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1474fd4064b8fe64f8c215f60c6bb123, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+--- !u!4 &2010968680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+  m_PrefabInstance: {fileID: 2010968679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2021476880
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_Name: pb_Mesh-8168
+=======
+  m_Name: pb_Mesh-103218
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5555,8 +6070,241 @@ Transform:
   m_Children:
   - {fileID: 1079940377}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 1.305, z: 0}
+=======
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2064661292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2064661293}
+  - component: {fileID: 2064661297}
+  - component: {fileID: 2064661296}
+  - component: {fileID: 2064661295}
+  - component: {fileID: 2064661294}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2064661293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064661292}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 4.98, y: 1.98, z: -3.19}
+  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2058283388}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!54 &2064661294
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064661292}
+  serializedVersion: 2
+  m_Mass: 2
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2064661295
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064661292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2064661296
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064661292}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 89082709861d96b4fb65fa3222eaae79, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2064661297
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064661292}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2141436637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141436638}
+  - component: {fileID: 2141436642}
+  - component: {fileID: 2141436641}
+  - component: {fileID: 2141436640}
+  - component: {fileID: 2141436639}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2141436638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141436637}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.17, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 501502099}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2141436639
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141436637}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2141436640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141436637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2141436641
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141436637}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 89082709861d96b4fb65fa3222eaae79, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2141436642
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141436637}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
 --- !u!1001 &1493878031375765797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5566,11 +6314,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1493878031579395154, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_Name
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: CafeterialLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_RootOrder
       value: 1
+=======
+      value: PrototypeDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5582,7 +6338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream:SuckItUpUnityProject/Assets/Scenes/HUBLevel.unity
       value: -1886.6
+=======
+      value: 9.37
+>>>>>>> Stashed changes:SuckItUpUnityProject/Assets/Scenes/HUB.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5614,7 +6374,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493878031579395165, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
       propertyPath: DoorSceneIndex
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+--- !u!4 &1493878031375765798 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493878031579395161, guid: c9d47cdedd3e58144acb6a3c48d41c80, type: 3}
+  m_PrefabInstance: {fileID: 1493878031375765797}
+  m_PrefabAsset: {fileID: 0}

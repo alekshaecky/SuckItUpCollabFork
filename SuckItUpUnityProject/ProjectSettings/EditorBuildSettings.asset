@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ScienceLevel2.unity
     guid: a8d9358072c988048b38332d8ba4b8df
   - enabled: 1
-    path: Assets/Scenes/ArtLevel6.unity
+    path: Assets/Scenes/ArtLevel.unity
     guid: e6d74fbada757c64f865cb1b1c9013b4
   - enabled: 1
     path: Assets/Scenes/LibraryLevel3.unity

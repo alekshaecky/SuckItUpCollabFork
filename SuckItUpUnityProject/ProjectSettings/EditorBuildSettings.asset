@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HUB.unity
     guid: 939475b96f9585a49b126672fbf62c32
   - enabled: 1
+    path: Assets/Scenes/NeoHUB.unity
+    guid: 08702a79f94433f468298189e8002049
+  - enabled: 1
     path: Assets/Scenes/Prototype.unity
     guid: a59a3278a525baa40bba5712a1a8990e
   - enabled: 1

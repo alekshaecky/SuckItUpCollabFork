@@ -9,7 +9,7 @@ using UnityEngine;
 public class Init : MonoBehaviour
 {
 	int StartingScene = 3;          // currently first actual game scene = HUB world
-	int StartingVacuumPower = 0;	// starts at 0 for tutorial in HUB, can leave HUB until it is 1
+	int StartingVacuumPower = 1;	// 1 to 5
 
 	// Start is called before the first frame update
 	void Start()

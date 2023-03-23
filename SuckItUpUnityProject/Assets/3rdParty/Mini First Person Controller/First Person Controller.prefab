@@ -1495,11 +1495,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3646362e0a639a44c8ad18e89a5a84fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nozzleRank: 0
   suckForce: 10
+  powerMultiplier: 5
   SuckVFX: {fileID: 0}
+  FullVFX: {fileID: 0}
   TrackVFX: {fileID: 0}
   NozzleSmokeVFX: {fileID: 0}
+  DustCloudPrefab: {fileID: 0}
   VacuumSFX: {fileID: 8300000, guid: 7d0df7ece80efd144b29ba1a0f10be92, type: 3}
+  FullSFX: {fileID: 8300000, guid: 9d3733755413b2d4d8e826d7e6076812, type: 3}
   ObjectSuckedSFX: {fileID: 8300000, guid: e03f34a60e3131244b97c8e2d40f1ede, type: 3}
 --- !u!1001 &298450438
 PrefabInstance:

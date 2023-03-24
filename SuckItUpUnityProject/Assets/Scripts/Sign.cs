@@ -1,8 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-// Sign Object
-// Create trigger object - mark IsTrigger in collider, turn off renderer
-// Attach this script with SignText set to text to show in the inspector
 public class Sign : MonoBehaviour
 {
 	public string SignText;         // text if it should be displayed
@@ -19,18 +18,17 @@ public class Sign : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		HUDstyle.alignment = TextAnchor.UpperLeft;      // sets text flow left to right from top
-		HUDstyle.fontSize = 40;                         // font size to 40 (for HD display
+		HUDstyle.alignment = TextAnchor.MiddleCenter;      // sets text flow left to right from top
+		HUDstyle.fontSize = 24;
 		HUDstyle.normal.textColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);  // text color white White
 		HUDstyle.wordWrap = true;
 
-		// sets HUD display to bottom quarter of screen
-		HUDrect = new Rect(0, Screen.height * 0.75f, Screen.width, Screen.height * 0.25f);
+		// sets HUD display rectangle
+		//HUDrect = new Rect(Screen.width/4, Screen.height/3 + 200, Screen.width/2, 60);
+		HUDrect = new Rect(0, Screen.height, Screen.width, -60);
 
 		//Fetch the AudioSource from the GameObject
 		MyAudioSource = GetComponent<AudioSource>();
-
-		HUDtext = SignText;
 	}
 
 	private void Update()

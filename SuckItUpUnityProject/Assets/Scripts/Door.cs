@@ -27,7 +27,7 @@ public class Door : MonoBehaviour
 				Instantiate(shockwavePrefab, transform.position, Quaternion.identity);  // play particle or visual effect
 			}
 
-			SceneManager.LoadScene(DoorSceneIndex); // loads the c;assroom
+			SceneManager.LoadScene(DoorSceneIndex); // loads the classroom
 		}
 	}
 }

@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		GameObject camera;
+		//GameObject camera;
 
 		TargetObject = GameObject.FindGameObjectWithTag("Player");
 		EnemyController = GetComponent<CharacterController>();

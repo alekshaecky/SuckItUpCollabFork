@@ -5,15 +5,16 @@ public class JunkMeter : MonoBehaviour
 {
 	public Texture2D JunkMeterTexture;
 	public int JunkCapacity; 				// it would be good to scale this as the nozzle is upgraded
-	public int NozzleLevel; 				
-	public int piecesOfJunk; 
+	public int piecesOfJunk;
+
+	Vacuum VacRef;
 
 	// Use this for initialization
 	void Start()
 	{
-		NozzleLevel = 100;                                       // The level of the players nozzle 
-		JunkCapacity = 10^(1+NozzleLevel);
-		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");   // Gets the max score value (# of Junk in Level)
+		VacRef = GameObject.FindObjectOfType<Vacuum>();
+		JunkCapacity = VacRef.GetCapacity();
+		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");             // Gets the max score value (# of Junk in Level)
 	}
 
 	// Update is called once per frame
@@ -37,6 +38,7 @@ public class JunkMeter : MonoBehaviour
 		int tempScore = PlayerPrefs.GetInt("PrefsTempScore");
 
 		GUI.Box(HUDrect, "");                   // displays default GUI box without header around meter
-		GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 5, (HUDrect.width - piecesOfJunk) * tempScore / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
+		int meterValue = (tempScore > JunkCapacity) ? JunkCapacity : tempScore;   // set meter - but not over
+		GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 5, (HUDrect.width - 10) * meterValue / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
 	}
 }

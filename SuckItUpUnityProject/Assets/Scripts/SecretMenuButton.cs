@@ -23,6 +23,6 @@ public class SecretMenuButton : MonoBehaviour
     void OnMouseDown()
     {
         SoundBoard.Instance.PlaySFX(indexSFX);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }

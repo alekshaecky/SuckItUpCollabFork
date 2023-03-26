@@ -33,7 +33,10 @@ public class MakeRoomsSuckable : MonoBehaviour
             //Debug.Log("Number of Rooms: " + rooms.Length);
             foreach (GameObject room in rooms)
             {
-                room.GetComponent<MeshCollider>().convex = true;
+                //room.GetComponent<MeshCollider>().convex = true;
+                // This is more efficient.
+                Destroy(room.GetComponent<MeshCollider>());
+                room.AddComponent<BoxCollider>();
                 room.AddComponent<Rigidbody>();
                 Rigidbody rb = room.GetComponent<Rigidbody>();
                 rb.useGravity = false;

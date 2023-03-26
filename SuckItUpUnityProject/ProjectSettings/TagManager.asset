@@ -9,6 +9,7 @@ TagManager:
   - InvisibleShelf
   - MakeSuckable
   - Teleporter
+  - Stairs
   layers:
   - Default
   - TransparentFX

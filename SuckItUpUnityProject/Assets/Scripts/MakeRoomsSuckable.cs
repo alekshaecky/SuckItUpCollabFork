@@ -21,20 +21,45 @@ public class MakeRoomsSuckable : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
+        //Debug.Log("Final Target Triggered. TriggerExit");
         // Test if it's the Player. Because there may be other stuff flying around. 
-        // Get all GameObjects with Tag MakeSuckable. 
-        // Get their MeshCollider. (GetComponent<MeshCollider>)
-        // set convex to true. 
-        // Add a Rigidbody - SphereCollider sc = gameObject.AddComponent(typeof(SphereCollider)) as SphereCollider;
-        // Set mass to 10000
-        // Uncheck Gravity
+        if (other.gameObject.CompareTag("Player"))
+        {
+            //Debug.Log("Final Target Triggered by Player.");
+            // Get all GameObjects with Tag MakeSuckable. 
+            GameObject[] rooms = GameObject.FindGameObjectsWithTag("MakeSuckable");
+            //Debug.Log("Number of Rooms: " + rooms.Length);
+            foreach (GameObject room in rooms)
+            {
+                room.GetComponent<MeshCollider>().convex = true;
+                room.AddComponent<Rigidbody>();
+                Rigidbody rb = room.GetComponent<Rigidbody>();
+                rb.useGravity = false;
+                rb.mass = 1.0f;
+
+            }
+            // Now we poof all the teleporters and targets.
+            // They are not suckable because they are too small to see. 
+
+            GameObject[] tps = GameObject.FindGameObjectsWithTag("Teleporter");
+            foreach (GameObject teleporter in tps) {
+                Destroy(teleporter); 
+            }
+
+            GameObject[] tgs = GameObject.FindGameObjectsWithTag("Target");
+            foreach (GameObject target in tgs)
+            {
+                Destroy(target);
+            }
+
+            GameObject[] stairs = GameObject.FindGameObjectsWithTag("Stairs");
+            foreach (GameObject stair in stairs)
+            {
+                Destroy(stair);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

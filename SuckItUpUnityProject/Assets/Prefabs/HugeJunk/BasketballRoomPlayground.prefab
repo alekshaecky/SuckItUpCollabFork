@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1721166578426918071}
   m_Layer: 0
   m_Name: BasketballRoomPlayground
-  m_TagString: Untagged
+  m_TagString: MakeSuckable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1270,9 +1270,21 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 3581
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 16000000
+  m_SelectedEdges:
+  - a: 99
+    b: 94
+  - a: 98
+    b: 99
+  - a: 94
+    b: 95
+  - a: 95
+    b: 96
+  - a: 96
+    b: 97
+  - a: 97
+    b: 98
+  m_SelectedVertices: 630000005e000000620000005f0000006000000061000000
 --- !u!114 &1721166578426918066
 MonoBehaviour:
   m_ObjectHideFlags: 0

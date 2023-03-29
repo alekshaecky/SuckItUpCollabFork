@@ -166,6 +166,7 @@ public class Vacuum : MonoBehaviour
 							if (hit.transform.gameObject.tag.Contains("Bounce"))
                             {
 								hit.transform.gameObject.tag = "NoBounce";
+								Debug.Log("debouncing");
                             }
 
 								// Get the GameObject: hit.transform.gameObject;

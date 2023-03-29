@@ -8,7 +8,7 @@ using UnityEngine;
  * and a Rigidbody around a space delimited by Colliders.
  * 
  * Expects Gravity of Rigidbody to be off, 
- * though turning it on could probably have additional effects...
+ * though turning it might have interesting effects...
  */
 public class BounceBall : MonoBehaviour
 {
@@ -52,7 +52,7 @@ public class BounceBall : MonoBehaviour
                 stopBounceVelocity();
                 break;
             default:
-                Debug.Log("Not a ball.");
+                //Debug.Log("Not a ball.");
                 break; 
         }
     }
@@ -60,16 +60,14 @@ public class BounceBall : MonoBehaviour
     /**
      * Note: Could just implement one function that bounces on a supplied axis,
      * and a boolean for random, and a float for speed. 
-     * I decided this is easier to debug, and easier to understand
-     * at a glance.
+     * I decided this is easier to debug, and easier to understand.
      */
 
     /**
      * As implemented, objects are not very suckable, resisting the pull. 
-     * So, once they are being sucked, we need to change their label and stop their velocity.
-     * This will be implemented in Vacuum.cs.
-     * IF the object is bouncing (one of the bounce tags), then we change the tag to NoBounce. 
-     * Then this function is called. It turns off gravity and sets velocity to 0.
+     * So, once they are being sucked, we change their label in Vacuum.cs to NoBounce. 
+     * Then this function is calle to set velocity to 0.
+     * IMPORTANT: The ball is now and forever under control of the Vacuum algorithms/physics.
      */
     void stopBounceVelocity()
     {
@@ -106,6 +104,7 @@ public class BounceBall : MonoBehaviour
 
     /**
      * Basically, patrol and bounce off walls.
+     * The randomized speed vector alters the direction.
      */
     void bounceRandomHorizontal()
     {
@@ -115,10 +114,11 @@ public class BounceBall : MonoBehaviour
         if (rb.velocity.x <= 0) rb.velocity = new Vector3(Random.Range(-speed, -speed / 2),0, rb.velocity.z);
         if (rb.velocity.x > 0) rb.velocity = new Vector3(Random.Range(speed / 2, speed), 0, rb.velocity.z);
     }
-    
-    
+
+
     /*
      * Bounce in random directions. 
+     * The randomized speed vector alters the direction.
      */
     void bounceRandom()
     {
@@ -142,6 +142,7 @@ public class BounceBall : MonoBehaviour
             // Move the Player to Start; nothing is lost.
             if (target != null)
             {
+                // Teleport the Player, usually back to start.
                 other.transform.position = target.position;
                 other.transform.rotation = target.rotation;
                 Physics.SyncTransforms();  // update transforms so Physics and Move controller work properly after teleport

@@ -161,9 +161,16 @@ public class Vacuum : MonoBehaviour
 					{
 						if (IsSuckable(hit.rigidbody.mass))
 						{
-							// Get the GameObject: hit.transform.gameObject;
-							// Instantiate as child: public static Object Instantiate(Object original, Transform parent);
-							if (DustCloudPrefab)
+							// We need to check if the object is moving on its own, in which case it will resists sucking. 
+							// So we turn off its "bounce". See Script BallBounce and Balls in Playground. 
+							if (hit.transform.gameObject.tag.Contains("Bounce"))
+                            {
+								hit.transform.gameObject.tag = "NoBounce";
+                            }
+
+								// Get the GameObject: hit.transform.gameObject;
+								// Instantiate as child: public static Object Instantiate(Object original, Transform parent);
+								if (DustCloudPrefab)
 							{
 								dustCloud = Instantiate(DustCloudPrefab, hit.transform);
 							}

@@ -12,9 +12,10 @@ TagManager:
   - Stairs
   - BounceVertical
   - BounceRandom
-  - FloatRandom
   - BounceHorizontalX
   - BounceHorizontalZ
+  - BounceRandomHorizontal
+  - NoBounce
   layers:
   - Default
   - TransparentFX

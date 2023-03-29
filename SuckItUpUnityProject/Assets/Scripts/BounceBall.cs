@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * Bounce a a GameObject with a Collider, a Triggering Collider, 
+ * and a Rigidbody around a space delimited by Colliders.
+ * 
+ * Expects Gravity of Rigidbody to be off, 
+ * though turning it on could probably have additional effects...
+ */
 public class BounceBall : MonoBehaviour
 {
 
@@ -34,11 +42,14 @@ public class BounceBall : MonoBehaviour
             case "BounceHorizontalZ":
                 bounceHorizontalZ();
                 break;
+            case "BounceRandomHorizontal": // Enemy patrol
+                bounceRandomHorizontal();
+                break;
             case "BounceRandom":
                 bounceRandom();
                 break;
-            case "FloatRandom":
-                floatRandom();
+            case "NoBounce":
+                stopBounceVelocity();
                 break;
             default:
                 Debug.Log("Not a ball.");
@@ -46,25 +57,37 @@ public class BounceBall : MonoBehaviour
         }
     }
 
-    /* Note: Could just implement one function that bounces on a supplied axis,
+    /**
+     * Note: Could just implement one function that bounces on a supplied axis,
      * and a boolean for random, and a float for speed. 
      * I decided this is easier to debug, and easier to understand
      * at a glance.
      */
 
-    /*
+    /**
+     * As implemented, objects are not very suckable, resisting the pull. 
+     * So, once they are being sucked, we need to change their label and stop their velocity.
+     * This will be implemented in Vacuum.cs.
+     * IF the object is bouncing (one of the bounce tags), then we change the tag to NoBounce. 
+     * Then this function is called. It turns off gravity and sets velocity to 0.
+     */
+    void stopBounceVelocity()
+    {
+        rb.velocity = new Vector3(0, 0, 0);
+        this.tag = "Untagged";
+    }
+
+    /**
      * Bounce vertically between two colliders.
-     * Expects gravity to be enabled. 
-     * 
      */
     void bounceVertical()
     {
-        if (rb.velocity.y < 0) rb.velocity = new Vector3(0, -speed, 0);
+        if (rb.velocity.y <= 0) rb.velocity = new Vector3(0, -speed, 0);
         if (rb.velocity.y > 0) rb.velocity = new Vector3(0, speed, 0);
     }
     
-    /* Bounce horizontally between two colliders on the X axis.
-     * Expcets NO gravity.
+    /**
+     * Bounce horizontally between two colliders on the X axis.
      */
     void bounceHorizontalX()
     {
@@ -72,8 +95,8 @@ public class BounceBall : MonoBehaviour
         if (rb.velocity.x > 0) rb.velocity = new Vector3(speed, 0, 0);
     }
 
-    /* Bounce horizontally between two colliders on the Z axis.
-     * Expcets NO gravity.
+    /**
+     * Bounce horizontally between two colliders on the Z axis.
      */
     void bounceHorizontalZ()
     {
@@ -81,22 +104,32 @@ public class BounceBall : MonoBehaviour
         if (rb.velocity.z > 0) rb.velocity = new Vector3(0, 0, speed);
     }
 
+    /**
+     * Basically, patrol and bounce off walls.
+     */
+    void bounceRandomHorizontal()
+    {
+        if (rb.velocity.z <= 0) rb.velocity = new Vector3(rb.velocity.x, 0, Random.Range(-speed, -speed/2));
+        if (rb.velocity.z > 0) rb.velocity = new Vector3(rb.velocity.x, 0, Random.Range(speed/2, speed));
+
+        if (rb.velocity.x <= 0) rb.velocity = new Vector3(Random.Range(-speed, -speed / 2),0, rb.velocity.z);
+        if (rb.velocity.x > 0) rb.velocity = new Vector3(Random.Range(speed / 2, speed), 0, rb.velocity.z);
+    }
+    
+    
     /*
      * Bounce in random directions. 
-     * Expects gravity to be enabled.
      */
     void bounceRandom()
     {
-        
-    }
+        if (rb.velocity.z <= 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Random.Range(-speed, -speed / 2));
+        if (rb.velocity.z > 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Random.Range(speed / 2, speed));
 
-    /*
-     * Float randomly in varying directions.
-     * Expects NO gravity.
-     */
-    void floatRandom()
-    {
+        if (rb.velocity.x <= 0) rb.velocity = new Vector3(Random.Range(-speed, -speed / 2), rb.velocity.y, rb.velocity.z);
+        if (rb.velocity.x > 0) rb.velocity = new Vector3(Random.Range(speed / 2, speed), rb.velocity.y, rb.velocity.z);
 
+        if (rb.velocity.y <= 0) rb.velocity = new Vector3(rb.velocity.x, Random.Range(-speed, -speed / 2), rb.velocity.z);
+        if (rb.velocity.y > 0) rb.velocity = new Vector3(rb.velocity.x, Random.Range(speed / 2, speed), rb.velocity.z);
     }
 
 

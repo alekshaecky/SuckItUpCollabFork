@@ -11,16 +11,17 @@ public class Vacuum : MonoBehaviour
 	//public float suckForce;
 	//public float powerMultiplier;
 
-	public GameObject SuckVFX;
-	public GameObject FullVFX;
-	public GameObject TrackVFX;
-	public GameObject NozzleSmokeVFX;
-	public GameObject DustCloudPrefab;
-	// TBD: These need to be instantiated instead of variables so we don't
-	// have to change it for every single level!
-	// Reply: Nope - they are part of the PREFAB and only set once
-
+	private GameObject NozzleSuckVFX; // Effect indicating nozzle is actively sucking up stuff.
+	private GameObject NozzleTrackVFX; // Trail effect indication object is being tracked/sucked.
+	private GameObject NozzleSmokeVFX; // Smoke showing when Nozzle is inactive.
+	
+	public GameObject NozzleDustCloudPrefab; // Dust Cloud on sucked item. 
 	private GameObject dustCloud;
+
+	public GameObject FullVFX; // Shows when nozzle is full.
+
+
+
 
 	public AudioClip VacuumSFX;                   // vacuum sound
 	int VacuumAudioIndex;                  // SoundBoard audio index
@@ -43,6 +44,15 @@ public class Vacuum : MonoBehaviour
 		SuckedAudioIndex = SoundBoard.Instance.AddSoundEffect(ObjectSuckedSFX);
 		FullAudioIndex = SoundBoard.Instance.AddSoundEffect(FullSFX);
 		Capacity = GetCapacity();
+
+		// They are different for each nozzle, so we need to get them.
+		// Only 1 Nozzle is active at a time, so this should always get the correct instance for the nozzle.
+		NozzleSuckVFX = GameObject.FindWithTag("NozzleSuckVFX");
+		NozzleSuckVFX.SetActive(false);
+		NozzleTrackVFX = GameObject.FindWithTag("NozzleTrackVFX");
+		NozzleTrackVFX.SetActive(false);
+		NozzleSmokeVFX = GameObject.FindWithTag("NozzleSmokeVFX");
+		NozzleSmokeVFX.SetActive(true);
 	}
 
 	public int GetCapacity()
@@ -124,9 +134,18 @@ public class Vacuum : MonoBehaviour
 			{
 				SoundBoard.Instance.PlayLoopedSFX(VacuumAudioIndex);
 				// Show Nozzle Effect
-				if (SuckVFX) SuckVFX.SetActive(true);
-				if (TrackVFX) TrackVFX.SetActive(true);
-				if (NozzleSmokeVFX) NozzleSmokeVFX.SetActive(false);
+				if (NozzleSuckVFX)
+				{
+					NozzleSuckVFX.SetActive(true);
+				}
+				if (NozzleTrackVFX)
+				{
+					NozzleTrackVFX.SetActive(true);
+				}
+				if (NozzleSmokeVFX)
+				{
+					NozzleSmokeVFX.SetActive(false);
+				}
 			}
 			else
 			{
@@ -141,9 +160,17 @@ public class Vacuum : MonoBehaviour
 			// needs a parameter for stopping a sound that is playing by index
 			SoundBoard.Instance.StopLoopedSFX();
 			// Hide Nozzle Effect
-			if (SuckVFX) SuckVFX.SetActive(false);
-			if (TrackVFX) TrackVFX.SetActive(false);
-			if (NozzleSmokeVFX) NozzleSmokeVFX.SetActive(true);
+			if (NozzleSuckVFX) {
+				NozzleSuckVFX.SetActive(false);
+			}
+			if (NozzleTrackVFX)
+			{
+				NozzleTrackVFX.SetActive(false);
+			}
+			if (NozzleSmokeVFX)
+			{
+				NozzleSmokeVFX.SetActive(true);
+			}
 		}
 
 		if (Input.GetButton("Fire1"))
@@ -171,9 +198,9 @@ public class Vacuum : MonoBehaviour
 
 								// Get the GameObject: hit.transform.gameObject;
 								// Instantiate as child: public static Object Instantiate(Object original, Transform parent);
-								if (DustCloudPrefab)
+								if (NozzleDustCloudPrefab)
 							{
-								dustCloud = Instantiate(DustCloudPrefab, hit.transform);
+								dustCloud = Instantiate(NozzleDustCloudPrefab, hit.transform);
 							}
 							hit.rigidbody.AddForceAtPosition(ray.direction * SuckForce(hit.rigidbody.mass) * -1.0f, hit.point);
 						}
@@ -196,15 +223,23 @@ public class Vacuum : MonoBehaviour
 			{
 				// turn off sfx & vfx we are full
 				// check to only turn off if on
-				if (SuckVFX)
+				if (NozzleSuckVFX)
 				{
-					if (SuckVFX.activeSelf == true)
+					if (NozzleSuckVFX.activeSelf == true)
 					{
 						SoundBoard.Instance.StopLoopedSFX();
 						// Hide Nozzle Effect
-						if (SuckVFX) SuckVFX.SetActive(false);
-						if (TrackVFX) TrackVFX.SetActive(false);
-						if (NozzleSmokeVFX) NozzleSmokeVFX.SetActive(true);
+						if (NozzleSuckVFX)
+						{
+							NozzleSuckVFX.SetActive(false);
+						}
+						if (NozzleTrackVFX)
+						{
+							NozzleTrackVFX.SetActive(false);
+						}
+						if (NozzleSmokeVFX) {
+							NozzleSmokeVFX.SetActive(true);
+						}
 						// play FULL capacity SFX
 						Debug.Log("Full capacity");
 						SoundBoard.Instance.PlaySFX(FullAudioIndex);

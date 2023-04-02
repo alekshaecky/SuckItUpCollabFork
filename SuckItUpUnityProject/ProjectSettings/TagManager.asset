@@ -16,6 +16,10 @@ TagManager:
   - BounceHorizontalZ
   - BounceRandomHorizontal
   - NoBounce
+  - Smoke
+  - NozzleSuckVFX
+  - NozzleTrackVFX
+  - NozzleSmokeVFX
   layers:
   - Default
   - TransparentFX

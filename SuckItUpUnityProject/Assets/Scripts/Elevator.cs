@@ -19,7 +19,6 @@ public class Elevator : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
         rb.velocity = new Vector3(0, -speed, 0);
-        Debug.Log("Starting");
     }
 
 
@@ -28,17 +27,13 @@ public class Elevator : MonoBehaviour
         switch (other.name)
         {
             case "ElevatorBouncerTop":
-                Debug.Log("top " + rb.velocity);
                 rb.velocity = Vector3.down * speed;
-                Debug.Log("top " + rb.velocity);
                 break;
             case "ElevatorBouncerBottom":
-                Debug.Log("bottom " + rb.velocity);
                 rb.velocity = Vector3.up * speed;
-                Debug.Log("bottom " + rb.velocity);
                 break;
             default:
-                Debug.Log("Not the right trigger: " + other.name);
+                rb.velocity = Vector3.up * speed;
                 break;
         }
     }

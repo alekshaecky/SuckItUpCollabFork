@@ -52,9 +52,15 @@ public class Vacuum : MonoBehaviour
 		Capacity = GetCapacity();
 
 
-		NozzleSuckVFX.SetActive(false);
-		NozzleTrackVFX.SetActive(false);
-		NozzleSmokeVFX.SetActive(true);
+		if (NozzleSuckVFX) {
+			NozzleSuckVFX.SetActive(false);
+		}
+		if (NozzleTrackVFX) {
+			NozzleTrackVFX.SetActive(false);
+		}
+		if (NozzleSmokeVFX) {
+			NozzleSmokeVFX.SetActive(true);
+		}
 	}
 
 	public int GetCapacity()

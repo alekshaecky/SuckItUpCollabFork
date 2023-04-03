@@ -35,6 +35,12 @@ public class Vacuum : MonoBehaviour
 	{
 		nozzleRank = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
 		//nozzleRank = 5;	// uncomment to overide and test different nozzleRanks (1 to 5)
+
+		// They are different for each nozzle, so we need to get them.
+		// Only 1 Nozzle is active at a time, so this should always get the correct FX for the nozzle.
+		NozzleSuckVFX = GameObject.FindWithTag("NozzleSuckVFX");
+		NozzleTrackVFX = GameObject.FindWithTag("NozzleTrackVFX");
+		NozzleSmokeVFX = GameObject.FindWithTag("NozzleSmokeVFX");
 	}
 
 	// Start is called before the first frame update
@@ -45,13 +51,9 @@ public class Vacuum : MonoBehaviour
 		FullAudioIndex = SoundBoard.Instance.AddSoundEffect(FullSFX);
 		Capacity = GetCapacity();
 
-		// They are different for each nozzle, so we need to get them.
-		// Only 1 Nozzle is active at a time, so this should always get the correct instance for the nozzle.
-		NozzleSuckVFX = GameObject.FindWithTag("NozzleSuckVFX");
+
 		NozzleSuckVFX.SetActive(false);
-		NozzleTrackVFX = GameObject.FindWithTag("NozzleTrackVFX");
 		NozzleTrackVFX.SetActive(false);
-		NozzleSmokeVFX = GameObject.FindWithTag("NozzleSmokeVFX");
 		NozzleSmokeVFX.SetActive(true);
 	}
 
@@ -153,6 +155,7 @@ public class Vacuum : MonoBehaviour
 				Debug.Log("Full capacity");
 				SoundBoard.Instance.PlaySFX(FullAudioIndex);
 			}
+			Debug.Log(NozzleSuckVFX.activeSelf);
 		}
 
 		if (Input.GetButtonUp("Fire1"))

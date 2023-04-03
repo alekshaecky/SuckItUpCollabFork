@@ -161,7 +161,6 @@ public class Vacuum : MonoBehaviour
 				Debug.Log("Full capacity");
 				SoundBoard.Instance.PlaySFX(FullAudioIndex);
 			}
-			Debug.Log(NozzleSuckVFX.activeSelf);
 		}
 
 		if (Input.GetButtonUp("Fire1"))

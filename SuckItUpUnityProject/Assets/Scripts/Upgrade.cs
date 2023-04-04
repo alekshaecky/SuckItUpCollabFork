@@ -20,32 +20,22 @@ public class Upgrade : MonoBehaviour
         // check Nozzle level
         if (PlayerPrefs.GetInt("PrefsTotalScore") < 10000)
         {
-            /* 
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower") = 1;
-            */
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 1);
         }
         if (PlayerPrefs.GetInt("PrefsTotalScore") < 20000)
         {
-            /*
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower") = 2;
-            */
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 2);
         }
         if (PlayerPrefs.GetInt("PrefsTotalScore") < 25000)
         {
-            /*
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower") = 3;
-            */
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 3);
         }
         if (PlayerPrefs.GetInt("PrefsTotalScore") < 30000)
         {
-            /*
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower") = 4;
-            */
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 4);
         }
         // else bigger than 50000
-        /*
-        PlayerPrefs.SetInt("PrefsCurrentVacuumPower") = 5;
-        */
+        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
 
     }
 

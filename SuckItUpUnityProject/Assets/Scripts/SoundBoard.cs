@@ -66,7 +66,7 @@ public class SoundBoard : MonoBehaviour
 	// call this to change & play the music
 	public void PlayMusic(AudioClip music)
 	{
-		Debug.Log("Play Music: " + music.name);
+		//Debug.Log("Play Music: " + music.name);
 		audioMusic.loop = true;         // always loop music
 		audioMusic.volume = 0.25f;      // quiet music
 		audioMusic.clip = music;        // which clip to play
@@ -81,7 +81,7 @@ public class SoundBoard : MonoBehaviour
 	{
 		if ((index >= 0) && !bPaused && (index < SoundEffects.Count))
 		{
-			Debug.Log("Play looped sound");
+			//Debug.Log("Play looped sound");
 			audioLoopedSFX.loop = true;                     // always loop this SFX
 			audioLoopedSFX.volume = volume;                 // quiet sound SFX
 			audioLoopedSFX.clip = SoundEffects[index];      // which clip to play
@@ -92,7 +92,7 @@ public class SoundBoard : MonoBehaviour
 	// call this to stop the looping sound effect
 	public void StopLoopedSFX()
 	{
-		Debug.Log("Stop Vacuum sound: " + audioLoopedSFX.name);
+		//Debug.Log("Stop Vacuum sound: " + audioLoopedSFX.name);
 		audioLoopedSFX.Stop();         // stop this SFX
 	}
 
@@ -104,7 +104,7 @@ public class SoundBoard : MonoBehaviour
 			if (!SoundEffects.Contains(newSFX))
 			{
 				SoundEffects.Add(newSFX);
-				Debug.Log("Added SFX " + newSFX.name);
+				//Debug.Log("Added SFX " + newSFX.name);
 			}
 			return SoundEffects.IndexOf(newSFX);
 		}

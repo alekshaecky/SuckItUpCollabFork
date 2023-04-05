@@ -18,5 +18,12 @@ public class DeathBox : MonoBehaviour
 			SoundBoard.Instance.PlaySFX(AudioIndex);
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
+		else
+        {
+			// Don't let floating Junk get stuck inside or below the Deathbox. 
+			// Just bounce it back up. 
+			Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
+			rb.velocity = -rb.velocity;
+		}
 	}
 }

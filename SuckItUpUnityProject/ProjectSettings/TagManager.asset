@@ -7,6 +7,20 @@ TagManager:
   - Enemy
   - Target
   - InvisibleShelf
+  - MakeSuckable
+  - Teleporter
+  - Stairs
+  - BounceVertical
+  - BounceRandom
+  - BounceHorizontalX
+  - BounceHorizontalZ
+  - BounceRandomHorizontal
+  - NoBounce
+  - Smoke
+  - NozzleSuckVFX
+  - NozzleTrackVFX
+  - NozzleSmokeVFX
+  - Test
   layers:
   - Default
   - TransparentFX

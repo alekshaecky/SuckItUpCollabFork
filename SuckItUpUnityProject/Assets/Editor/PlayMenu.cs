@@ -31,7 +31,7 @@ public static class PlayMenu
 
     private static void OnPlayButton(PlayModeStateChange state)
     {
-        Debug.Log("I am here");
+        //Debug.Log("I am here");
 
 		// handle turn on PLAY button - save unsaved scene or stop
 		if (!EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode)

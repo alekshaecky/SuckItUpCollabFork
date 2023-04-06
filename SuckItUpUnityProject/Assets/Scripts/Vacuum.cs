@@ -114,23 +114,45 @@ public class Vacuum : MonoBehaviour
 		// verify object rigidbody mass is suckable at current nozzleRank
 		if (objMass < 25)
 		{
+#if UNITY_WEBGL
+            return 100f;
+#else	
 			return 10f;
+#endif
 		}
 		if (objMass < 100)
 		{
+#if UNITY_WEBGL
+			return 500f;
+#else
 			return 50f;
+#endif
 		}
 		if (objMass < 1000)
 		{
+#if UNITY_WEBGL
+            return 7500f;
+#else
 			return 750f;
+#endif
 		}
 		if (objMass < 10000)
 		{
+#if UNITY_WEBGL
+			return 80000f;
+#else
 			return 8000f;
+#endif
 		}
 		// else bigger than 10000
+#if UNITY_WEBGL
+		return 300000f;
+#else
 		return 30000f;
+#endif
 	}
+
+
 	// Update is called once per frame
 	void Update()
 	{

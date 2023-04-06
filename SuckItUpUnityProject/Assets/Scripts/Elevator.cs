@@ -10,7 +10,7 @@ using UnityEngine;
 public class Elevator : MonoBehaviour
 {
 
-    private float speed = 7.0f;
+    private float speed = 4.0f;
     private Rigidbody rb;
  
 

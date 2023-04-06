@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.18028374, g: 0.22571409, b: 0.3069224, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.1802843, g: 0.22571497, b: 0.30692366, a: 1}
+>>>>>>> 817f6352a4411eafe482b263ab4ab07c943bc017
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -30565,7 +30569,6 @@ GameObject:
   - component: {fileID: 1827189475}
   - component: {fileID: 1827189474}
   - component: {fileID: 1827189480}
-  - component: {fileID: 1827189481}
   m_Layer: 0
   m_Name: PlaceholderVendingMachine
   m_TagString: Untagged
@@ -30983,6 +30986,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+<<<<<<< HEAD
 --- !u!114 &1827189481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31000,6 +31004,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7602365085479432375, guid: 426c6e3426e3f744aa4c4ed117c97234, type: 3}
   m_PrefabInstance: {fileID: 1185907517}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> 817f6352a4411eafe482b263ab4ab07c943bc017
 --- !u!4 &1847293338 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2234973348746920648, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
@@ -33045,7 +33051,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh115502
+=======
+  m_Name: pb_Mesh37654
+>>>>>>> 817f6352a4411eafe482b263ab4ab07c943bc017
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

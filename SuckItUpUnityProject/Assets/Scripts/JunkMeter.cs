@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class JunkMeter : MonoBehaviour
 {
@@ -30,7 +30,30 @@ public class JunkMeter : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		
+		// cheat for Vacuum Nozzle Rank
+		if (Input.GetKeyDown(KeyCode.U))
+		{
+			switch (PlayerPrefs.GetInt("PrefsCurrentVacuumPower"))
+			{
+				case 1:
+					PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 2);
+					break;
+				case 2:
+					PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 3);
+					break;
+				case 3:
+					PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 4);
+					break;
+				case 4:
+					PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
+					break;
+				default:
+					PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 1);
+					break;
+			}
+			PlayerPrefs.Save();
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
 	}
 
 	// Initialize GUI

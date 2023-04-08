@@ -31,7 +31,7 @@ public class BounceBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (this.tag)
+        switch (gameObject.tag)
         {
             case "BounceVertical":
                 bounceVertical();

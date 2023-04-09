@@ -46,7 +46,7 @@ public class Init : MonoBehaviour
 		PlayerPrefs.SetString("PrefsApp", Application.productName);     // set to Player Setting
 		PlayerPrefs.SetString("PrefsVersion", Application.version);     // set to Player Setting
 		PlayerPrefs.SetInt("PrefsStartingSceneIndex", StartingScene);   // up to game
-		PlayerPrefs.SetInt("PrefsCurrentVacuumPower", StartingVacuumPower);		// start at power 0, can leave HUB until it is 1
+		PlayerPrefs.SetInt("PrefsCurrentVacuumPower", StartingVacuumPower);		// start at power 0, can't leave HUB until it is 1
 		PlayerPrefs.GetInt("PrefsTotalScore", 0);                       // up to game
 		PlayerPrefs.GetInt("PrefsTempScore", 0);						// score of current level run
 		PlayerPrefs.SetInt("PrefsLevel1HighScore", 0);                  // level 1 high score

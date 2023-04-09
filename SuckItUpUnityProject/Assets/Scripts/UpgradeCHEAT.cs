@@ -52,8 +52,6 @@ public class UpgradeCHEAT : MonoBehaviour
         }
         collidable = false;
 
-        Debug.Log("Current Nozzle: " + PlayerPrefs.GetInt("PrefsCurrentVacuumPower"));
-
         // Need to prevent multiple triggering events.
         // So we add a cooldown.
         StartCoroutine(Reset());

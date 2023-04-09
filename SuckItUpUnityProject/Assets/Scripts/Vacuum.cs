@@ -109,14 +109,14 @@ public class Vacuum : MonoBehaviour
 		return true;
 	}
 
-	public float SuckForce(float objMass)
+public float SuckForce(float objMass)
 	{
 		// verify object rigidbody mass is suckable at current nozzleRank
 		if (objMass < 25)
 		{
 #if UNITY_WEBGL
             return 100f;
-#else	
+#else
 			return 10f;
 #endif
 		}

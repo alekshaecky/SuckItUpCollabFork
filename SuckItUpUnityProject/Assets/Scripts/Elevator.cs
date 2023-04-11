@@ -10,30 +10,42 @@ using UnityEngine;
 public class Elevator : MonoBehaviour
 {
 
-    private float speed = 7.0f;
+    private float speed = 5.0f;
     private Rigidbody rb;
+    //private GameObject player;
+    //private Rigidbody prb;
  
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody>();
         rb.velocity = new Vector3(0, -speed, 0);
     }
 
+    void moveDown()
+    {
+        rb.velocity = Vector3.down * speed;
+    }
+
+    void moveUp()
+    {
+        rb.velocity = Vector3.up * speed;
+    }
 
     void OnTriggerEnter(Collider other)
     {
         switch (other.name)
         {
             case "ElevatorBouncerTop":
-                rb.velocity = Vector3.down * speed;
+                rb.velocity = Vector3.zero;
+                Invoke("moveDown", 3);
                 break;
             case "ElevatorBouncerBottom":
-                rb.velocity = Vector3.up * speed;
+                rb.velocity = Vector3.zero;
+                Invoke("moveUp", 3);
                 break;
             default:
-                rb.velocity = Vector3.up * speed;
                 break;
         }
     }

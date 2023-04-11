@@ -12,6 +12,7 @@ public class ActivateNozzle : MonoBehaviour
 
 	private GameObject Nozzle1;
 	private GameObject Nozzle01;
+	private GameObject Nozzle1VFX;
 	private GameObject Nozzle2;
 	private GameObject Nozzle3;
 	private GameObject Nozzle4;
@@ -21,12 +22,13 @@ public class ActivateNozzle : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 		// All Nozzles must be active at Start!!!
 
 		Nozzle1 = GameObject.Find("Nozzle1");
 		Nozzle01 = GameObject.Find("Nozzle01");
+		Nozzle1VFX = GameObject.Find("Nozzle1VFX");
 		Nozzle2 = GameObject.Find("Nozzle2");
 		Nozzle3 = GameObject.Find("Nozzle3");
 		Nozzle4 = GameObject.Find("Nozzle4");
@@ -41,7 +43,8 @@ public class ActivateNozzle : MonoBehaviour
 		{
 			case 1:
 				//Activate Nozzle 1.
-				Nozzle01.SetActive(true);
+				//Nozzle01.SetActive(true);
+				Nozzle1VFX.SetActive(true);
 				break;
 			case 2:
 				//Activate Nozzle 2.
@@ -72,6 +75,7 @@ public class ActivateNozzle : MonoBehaviour
     {
 		Nozzle1.SetActive(false);
 		Nozzle01.SetActive(false);
+		Nozzle1VFX.SetActive(false);
 		Nozzle2.SetActive(false);
 		Nozzle3.SetActive(false);
 		Nozzle4.SetActive(false);

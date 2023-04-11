@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1802843, g: 0.22571497, b: 0.30692366, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028404, g: 0.22571458, b: 0.30692294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6064,7 +6064,7 @@ PrefabInstance:
     - target: {fileID: 451168051, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: VacuumSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 759db0ee650f24a9eaca80ca19118bac, type: 3}
+      objectReference: {fileID: 8300000, guid: 7d0df7ece80efd144b29ba1a0f10be92, type: 3}
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Name
       value: First Person Controller
@@ -6401,7 +6401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220a071e2f88dbf4ab5bd80dc2496094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMusic: {fileID: 8300000, guid: 95797d9ae839ac74e82b651831d1183f, type: 3}
+  gameMusic: {fileID: 8300000, guid: daa6de98899f61d4fbcbd1e0c9b291db, type: 3}
 --- !u!4 &492368455
 Transform:
   m_ObjectHideFlags: 0

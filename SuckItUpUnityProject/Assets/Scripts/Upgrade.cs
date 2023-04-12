@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Upgrade : MonoBehaviour
 {
@@ -36,7 +37,8 @@ public class Upgrade : MonoBehaviour
         }
         // else bigger than 50000
         PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
-
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

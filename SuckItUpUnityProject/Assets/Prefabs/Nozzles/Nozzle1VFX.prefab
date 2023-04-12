@@ -46,6 +46,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nozzle1TrackParticleTrail
       objectReference: {fileID: 0}
+    - target: {fileID: 7203050383812862945, guid: 47dc8ee2861e0ac46b586e86dc0af97c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7203050383812862948, guid: 47dc8ee2861e0ac46b586e86dc0af97c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -243,6 +247,10 @@ PrefabInstance:
     - target: {fileID: 4615458778071737926, guid: 01fd9598a30d1ce4a8cc917df22dc182, type: 3}
       propertyPath: m_Name
       value: Nozzle1RingParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615458778071737926, guid: 01fd9598a30d1ce4a8cc917df22dc182, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4615458778071737927, guid: 01fd9598a30d1ce4a8cc917df22dc182, type: 3}
       propertyPath: m_RootOrder

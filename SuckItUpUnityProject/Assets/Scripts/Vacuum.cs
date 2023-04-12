@@ -31,21 +31,20 @@ public class Vacuum : MonoBehaviour
 	int SuckedAudioIndex;
 	int Capacity;
 
-	private void Awake()
+	// Start is called before the first frame update
+	void Start()
 	{
 		nozzleRank = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
-		//nozzleRank = 5;	// uncomment to overide and test different nozzleRanks (1 to 5)
 
 		// They are different for each nozzle, so we need to get them.
 		// Only 1 Nozzle is active at a time, so this should always get the correct FX for the nozzle.
 		NozzleSuckVFX = GameObject.FindWithTag("NozzleSuckVFX");
+		Debug.Log(NozzleSuckVFX);
 		NozzleTrackVFX = GameObject.FindWithTag("NozzleTrackVFX");
 		NozzleSmokeVFX = GameObject.FindWithTag("NozzleSmokeVFX");
-	}
 
-	// Start is called before the first frame update
-	void Start()
-	{
+		//--------
+
 		VacuumAudioIndex = SoundBoard.Instance.AddSoundEffect(VacuumSFX);
 		SuckedAudioIndex = SoundBoard.Instance.AddSoundEffect(ObjectSuckedSFX);
 		FullAudioIndex = SoundBoard.Instance.AddSoundEffect(FullSFX);

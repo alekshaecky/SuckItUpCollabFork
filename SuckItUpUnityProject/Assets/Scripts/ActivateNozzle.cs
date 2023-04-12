@@ -11,9 +11,6 @@ public class ActivateNozzle : MonoBehaviour
 	public GameObject Nozzle4Prefab;
 	public GameObject Nozzle5Prefab;
 
-	public GameObject TestCubePrefab;
-	private GameObject tc;
-
 	private GameObject n1;
 	private GameObject n2;
 	private GameObject n3;
@@ -26,8 +23,7 @@ public class ActivateNozzle : MonoBehaviour
 	private Transform parent;
 
 
-	// Start is called before the first frame update
-	void Start()
+	void Awake()
 	{
 
 		// public static Object Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);

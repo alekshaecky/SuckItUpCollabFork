@@ -792,7 +792,6 @@ MonoBehaviour:
   Nozzle3Prefab: {fileID: 2711391421017424078, guid: f12b3807a4c3e804c8aadad5a3a84f4e, type: 3}
   Nozzle4Prefab: {fileID: 2711391421017424078, guid: 720d49c917089ee4dae2b72174a6195c, type: 3}
   Nozzle5Prefab: {fileID: 2711391421017424078, guid: d48922c729db56444b636bd6125eee47, type: 3}
-  TestCubePrefab: {fileID: 7884710415412081289, guid: d37d19e454a4a50458a97213966a850c, type: 3}
 --- !u!1 &4964284723692651118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nozzleRank: 0
-  NozzleDustCloudPrefab: {fileID: 6513599730104301078, guid: f288dd3d80306a8418326e4efe1d33b4, type: 3}
+  NozzleDustCloudPrefab: {fileID: 6513599730104301078, guid: df619aa679c6eb049b3f1ab2d14b4633, type: 3}
   FullVFX: {fileID: 0}
   VacuumSFX: {fileID: 8300000, guid: 7d0df7ece80efd144b29ba1a0f10be92, type: 3}
   FullSFX: {fileID: 8300000, guid: 9d3733755413b2d4d8e826d7e6076812, type: 3}

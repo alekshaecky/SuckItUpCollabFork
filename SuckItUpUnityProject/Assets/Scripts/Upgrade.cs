@@ -5,10 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class Upgrade : MonoBehaviour
 {
+
+    private GameObject upgradeVFX;
+    public AudioClip MySFX;
+
+    private int AudioIndex;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioIndex = SoundBoard.Instance.AddSoundEffect(MySFX);
+
+        upgradeVFX = GameObject.Find("StarBurstParticles");
+        if (upgradeVFX) upgradeVFX.SetActive(false); // turn off the effect now that we have a reference. 
+
     }
 
     // Update is called once per frame
@@ -38,7 +49,16 @@ public class Upgrade : MonoBehaviour
         // else bigger than 50000
         PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
         PlayerPrefs.Save();
+
+        upgradeVFX.SetActive(true);
+        StartCoroutine("waitABit");
+
+       
+    }
+    private IEnumerator waitABit()
+    {
+        yield return new WaitForSeconds(2.0f);
+        upgradeVFX.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }

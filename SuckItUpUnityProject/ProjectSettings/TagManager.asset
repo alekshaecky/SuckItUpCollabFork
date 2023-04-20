@@ -21,6 +21,7 @@ TagManager:
   - NozzleTrackVFX
   - NozzleSmokeVFX
   - Test
+  - TeleportFX
   layers:
   - Default
   - TransparentFX

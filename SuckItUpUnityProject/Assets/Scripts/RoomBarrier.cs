@@ -15,10 +15,10 @@ public class RoomBarrier : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Triggered");
+		//Debug.Log("Triggered");
 		if (other.CompareTag("Player"))
 		{
-			Debug.Log("Triggered Player");
+			//Debug.Log("Triggered Player");
 			SoundBoard.Instance.PlaySFX(AudioIndex);
 
 			if (shockwavePrefab != null)
@@ -31,6 +31,9 @@ public class RoomBarrier : MonoBehaviour
 	}
 	private void OnTriggerExit(Collider other)
     {
-		gameObject.GetComponent<Collider>().enabled = true;
+		if (other.CompareTag("Player"))
+		{
+			gameObject.GetComponent<Collider>().enabled = true;
+		}
 	}
 }

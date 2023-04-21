@@ -39,10 +39,11 @@ public class Teleport : MonoBehaviour
 
 
         }
-        else
-        {
-            Debug.Log("No target transform for " + this.gameObject.name);
-        }
+        //else
+        //{
+        //    Debug.Log("No target transform for " + this.gameObject.name);
+        //    // This triggers when a duck hits the teleporter.
+        //}
     }
     private IEnumerator teleportFX() {
         yield return new WaitForSeconds(1.0f);

@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 5685683311030899209}
   - component: {fileID: 8909631563639684972}
   - component: {fileID: 6636759000552836597}
+  - component: {fileID: 4267614524068558106}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -144,7 +145,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3145616903457793836}
-  m_LocalRotation: {x: -0, y: 0.5909384, z: -0, w: 0.8067167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
@@ -293,6 +294,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 8909631563639684972}
   m_maskType: 0
+--- !u!114 &4267614524068558106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145616903457793836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292e740e72bc7ed458a1ae24faf594d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &885866421139770299
 PrefabInstance:
   m_ObjectHideFlags: 0

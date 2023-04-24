@@ -138,7 +138,7 @@ public class Pause : MonoBehaviour
 
 			GUI.DrawTexture(new Rect(0, 0, 1920f, 1385f), BGImg);
 
-			GUI.Box(new Rect(0, 5, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
+			GUI.Box(new Rect(0, 10, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
 
 			GUI.Label(new Rect(10, 175, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
 

@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour
 {
 	public string HowToPlayText;
 	bool bPaused;            //Boolean to check if the game is paused or not
+	public Texture2D BGImg;
 
 	[HideInInspector]
 	public GUIStyle PauseStyle;       // set the text style of the frame counter
@@ -25,6 +26,7 @@ public class Pause : MonoBehaviour
 	public AudioClip ButtonSFX;
 	public int indexSFX;
 	public Font guiFont;            // default font to use for OnGui elements
+	public Font PauseFont;            // Pause Menu font to use for OnGui elements
 
 	void Start()
 	{
@@ -100,6 +102,13 @@ public class Pause : MonoBehaviour
 		//Set time.timescale to 1, this will cause animations and physics to continue updating at regular speed
 		Time.timeScale = 1;
 		SoundBoard.Instance.UnPause();
+
+		if ((guiFont != null) && (GUI.skin.font != guiFont))
+		{
+			// sets the global font used by OnGUI() UI stuff
+			GUI.skin.font = guiFont;
+			Debug.Log("Set font to " + guiFont.name);
+		}
 	}
 
 	void OnGUI()
@@ -113,6 +122,13 @@ public class Pause : MonoBehaviour
 
 		if (bPaused)
 		{
+			if ((guiFont != null) && (GUI.skin.font != PauseFont))
+			{
+			// sets the global font used by OnGUI() UI stuff
+			GUI.skin.font = PauseFont;
+			Debug.Log("Set font to " + PauseFont.name);
+			}
+
 			//Calculate change aspects
 			float resX = (float)(Screen.width) / 1920f;
 			float resY = (float)(Screen.height) / 1080f;
@@ -120,17 +136,19 @@ public class Pause : MonoBehaviour
 			//Set matrix
 			GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(resX, resY, 1));
 
-			GUI.Box(new Rect(0, 0, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
+			GUI.DrawTexture(new Rect(0, 0, 1920f, 1385f), BGImg);
 
-			GUI.Label(new Rect(10, 225, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
+			GUI.Box(new Rect(0, 20, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
 
-			if (GUI.Button(new Rect(1920f / 2 - 140, 1080f * 0.75f + -200, 280, 145), " ", ButtonStyle2))  // Quit to Main Menu Button
+			GUI.Label(new Rect(10, 175, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
+
+			if (GUI.Button(new Rect(1920f / 2 - -35, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle2))  // Quit to Main Menu Button
 			{
 				UnPause();
 				SoundBoard.Instance.PlaySFX(indexSFX);
 				SceneManager.LoadScene(0);  // quit to menu
 			}
-			if (GUI.Button(new Rect(1920f / 2 - 140, 1080f * 0.75f + -400, 280, 145), " ", ButtonStyle1))  // Resume game Button
+			if (GUI.Button(new Rect(1920f / 2 - 360, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle1))  // Resume game Button
 			{
 				UnPause();                  // resume game
 				SoundBoard.Instance.PlaySFX(indexSFX);

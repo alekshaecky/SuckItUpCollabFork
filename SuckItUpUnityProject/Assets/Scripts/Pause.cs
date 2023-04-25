@@ -122,11 +122,14 @@ public class Pause : MonoBehaviour
 
 		if (bPaused)
 		{
-			if ((guiFont != null) && (GUI.skin.font != PauseFont))
+			if (PauseFont)
 			{
-			// sets the global font used by OnGUI() UI stuff
-			GUI.skin.font = PauseFont;
-			Debug.Log("Set font to " + PauseFont.name);
+				if ((guiFont != null) && (GUI.skin.font != PauseFont))
+				{
+					// sets the global font used by OnGUI() UI stuff
+					GUI.skin.font = PauseFont;
+					Debug.Log("Set font to " + PauseFont.name);
+				}
 			}
 
 			//Calculate change aspects

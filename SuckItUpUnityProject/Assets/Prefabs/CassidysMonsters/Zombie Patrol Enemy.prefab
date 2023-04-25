@@ -90,6 +90,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 763984563048082953}
     m_Modifications:
+    - target: {fileID: 777765369406210236, guid: 38ac5b8f0dfb45742bb5ea81ea764b10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1474fd4064b8fe64f8c215f60c6bb123, type: 2}
     - target: {fileID: 1282348366853923177, guid: 38ac5b8f0dfb45742bb5ea81ea764b10, type: 3}
       propertyPath: m_Name
       value: Zombie child

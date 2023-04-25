@@ -39,7 +39,7 @@ public class Vacuum : MonoBehaviour
 		// They are different for each nozzle, so we need to get them.
 		// Only 1 Nozzle is active at a time, so this should always get the correct FX for the nozzle.
 		NozzleSuckVFX = GameObject.FindWithTag("NozzleSuckVFX");
-		Debug.Log(NozzleSuckVFX);
+		//Debug.Log(NozzleSuckVFX);
 		NozzleTrackVFX = GameObject.FindWithTag("NozzleTrackVFX");
 		NozzleSmokeVFX = GameObject.FindWithTag("NozzleSmokeVFX");
 
@@ -222,7 +222,7 @@ public float SuckForce(float objMass)
 							if (hit.transform.gameObject.tag.Contains("Bounce"))
                             {
 								hit.transform.gameObject.tag = "NoBounce";
-								Debug.Log("debouncing");
+								//Debug.Log("debouncing");
                             }
 
 								// Get the GameObject: hit.transform.gameObject;
@@ -235,7 +235,7 @@ public float SuckForce(float objMass)
 						}
 						else
 						{
-							Debug.Log("Not suckable");
+							//Debug.Log("Not suckable");
 						}
 					}
 					else

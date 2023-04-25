@@ -102,13 +102,6 @@ public class Pause : MonoBehaviour
 		//Set time.timescale to 1, this will cause animations and physics to continue updating at regular speed
 		Time.timeScale = 1;
 		SoundBoard.Instance.UnPause();
-
-		if ((guiFont != null) && (GUI.skin.font != guiFont))
-		{
-			// sets the global font used by OnGUI() UI stuff
-			GUI.skin.font = guiFont;
-			Debug.Log("Set font to " + guiFont.name);
-		}
 	}
 
 	void OnGUI()
@@ -122,14 +115,11 @@ public class Pause : MonoBehaviour
 
 		if (bPaused)
 		{
-			if (PauseFont)
+			if ((guiFont != null) && (GUI.skin.font != PauseFont))
 			{
-				if ((guiFont != null) && (GUI.skin.font != PauseFont))
-				{
-					// sets the global font used by OnGUI() UI stuff
-					GUI.skin.font = PauseFont;
-					Debug.Log("Set font to " + PauseFont.name);
-				}
+			// sets the global font used by OnGUI() UI stuff
+			GUI.skin.font = PauseFont;
+			Debug.Log("Set font to " + PauseFont.name);
 			}
 
 			//Calculate change aspects
@@ -141,18 +131,30 @@ public class Pause : MonoBehaviour
 
 			GUI.DrawTexture(new Rect(0, 0, 1920f, 1385f), BGImg);
 
-			GUI.Box(new Rect(0, 10, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
+			GUI.Box(new Rect(0, 20, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
 
 			GUI.Label(new Rect(10, 175, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
 
 			if (GUI.Button(new Rect(1920f / 2 - -35, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle2))  // Quit to Main Menu Button
 			{
+				if ((guiFont != null) && (GUI.skin.font != guiFont))
+				{
+					// sets the global font used by OnGUI() UI stuff
+					GUI.skin.font = guiFont;
+					Debug.Log("Set font to " + guiFont.name);
+				}
 				UnPause();
 				SoundBoard.Instance.PlaySFX(indexSFX);
 				SceneManager.LoadScene(0);  // quit to menu
 			}
 			if (GUI.Button(new Rect(1920f / 2 - 360, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle1))  // Resume game Button
 			{
+				if ((guiFont != null) && (GUI.skin.font != guiFont))
+				{
+					// sets the global font used by OnGUI() UI stuff
+					GUI.skin.font = guiFont;
+					Debug.Log("Set font to " + guiFont.name);
+				}
 				UnPause();                  // resume game
 				SoundBoard.Instance.PlaySFX(indexSFX);
 			}

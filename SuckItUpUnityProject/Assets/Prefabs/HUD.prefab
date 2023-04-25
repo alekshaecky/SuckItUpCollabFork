@@ -389,7 +389,7 @@ MonoBehaviour:
   ButtonSFX: {fileID: 8300000, guid: 1a6536f87b2871947a134cb5e8ac916e, type: 3}
   indexSFX: 0
   guiFont: {fileID: 12800000, guid: 87e931e5b2a99e14e9f5fb5e105ea15b, type: 3}
-  PauseFont: {fileID: 12800000, guid: 365f7e824c3eb0941bbb1fe6586fefda, type: 3}
+  PauseFont: {fileID: 12800000, guid: 4c72a8e2aa392e4478c8aa956634d4cb, type: 3}
 --- !u!114 &-8016019960534320976
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -102,6 +102,13 @@ public class Pause : MonoBehaviour
 		//Set time.timescale to 1, this will cause animations and physics to continue updating at regular speed
 		Time.timeScale = 1;
 		SoundBoard.Instance.UnPause();
+
+		if ((guiFont != null) && (GUI.skin.font != guiFont))
+		{
+			// sets the global font used by OnGUI() UI stuff
+			GUI.skin.font = guiFont;
+			Debug.Log("Set font to " + guiFont.name);
+		}
 	}
 
 	void OnGUI()
@@ -137,24 +144,12 @@ public class Pause : MonoBehaviour
 
 			if (GUI.Button(new Rect(1920f / 2 - -35, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle2))  // Quit to Main Menu Button
 			{
-				if ((guiFont != null) && (GUI.skin.font != guiFont))
-				{
-					// sets the global font used by OnGUI() UI stuff
-					GUI.skin.font = guiFont;
-					Debug.Log("Set font to " + guiFont.name);
-				}
 				UnPause();
 				SoundBoard.Instance.PlaySFX(indexSFX);
 				SceneManager.LoadScene(0);  // quit to menu
 			}
 			if (GUI.Button(new Rect(1920f / 2 - 360, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle1))  // Resume game Button
 			{
-				if ((guiFont != null) && (GUI.skin.font != guiFont))
-				{
-					// sets the global font used by OnGUI() UI stuff
-					GUI.skin.font = guiFont;
-					Debug.Log("Set font to " + guiFont.name);
-				}
 				UnPause();                  // resume game
 				SoundBoard.Instance.PlaySFX(indexSFX);
 			}

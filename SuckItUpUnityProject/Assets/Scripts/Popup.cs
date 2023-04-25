@@ -8,7 +8,7 @@ public class Popup : MonoBehaviour
 	public AudioClip ButtonSFX;     // audio for button
 	public int indexSFX;
 	public string PopupText;          // display text on the HUD
-	public string CharacterName;          
+	public string SpeakerName;          
 	public Texture2D SpeakerImg;
 
 	[HideInInspector]
@@ -56,7 +56,7 @@ public class Popup : MonoBehaviour
 	{
 		PopupText = newText;
 		SpeakerImg = newImage;
-		CharacterName = newName;
+		SpeakerName = newName;
 	}
 
 
@@ -73,7 +73,7 @@ public class Popup : MonoBehaviour
 			Rect textRect = HUDrect;
 			textRect.x = ImageSize;
 			GUI.Label(textRect, PopupText, HUDstyle);  // shows text in box with defined style
-			GUI.Label(textRect, CharacterName, HUDstyle);  // shows text in box with defined style
+			GUI.Box(new Rect(2, 343, 1920f, 1080f), SpeakerName + ":", HUDstyle);
 		}
 	}
 }

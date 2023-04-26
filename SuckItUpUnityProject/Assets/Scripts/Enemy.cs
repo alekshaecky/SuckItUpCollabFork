@@ -53,7 +53,10 @@ public class Enemy : MonoBehaviour
 			moveVector = transform.rotation * moveVector;   // multiply by rotation
 
 			// move in the forward facing direction (already rotated toward player), by moveSpeed
-			EnemyController.Move(moveVector);
+			if (EnemyController)
+			{
+				EnemyController.Move(moveVector);
+			}
             
 
             

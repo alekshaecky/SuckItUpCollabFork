@@ -27,34 +27,62 @@ public class Upgrade : MonoBehaviour
     {
         
     }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    // check Nozzle level
+    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 10000)
+    //    {
+    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 1);
+    //    }
+    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 20000)
+    //    {
+    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 2);
+    //    }
+    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 25000)
+    //    {
+    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 3);
+    //    }
+    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 30000)
+    //    {
+    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 4);
+    //    }
+    //    // else bigger than 50000
+    //    PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
+    //    PlayerPrefs.Save();
+
+    //    upgradeVFX.SetActive(true);
+    //    StartCoroutine("waitABit");
+    //}
+
     private void OnTriggerEnter(Collider other)
     {
-        // check Nozzle level
-        if (PlayerPrefs.GetInt("PrefsTotalScore") < 10000)
+        float score = PlayerPrefs.GetInt("PrefsTotalScore");
+
+        if (score >= 40000 ) // 40000+ 
         {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 1);
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
         }
-        if (PlayerPrefs.GetInt("PrefsTotalScore") < 20000)
-        {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 2);
-        }
-        if (PlayerPrefs.GetInt("PrefsTotalScore") < 25000)
-        {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 3);
-        }
-        if (PlayerPrefs.GetInt("PrefsTotalScore") < 30000)
+        else if (score >= 30000) //30000 - 39000 
         {
             PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 4);
         }
-        // else bigger than 50000
-        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
+        else if (score >= 20000) // 20000 - 29999
+        {
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 3);
+        }
+        else if (score >= 10000) // 10000 - 19999
+        {
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 2);
+        }
+        else // 0 - 9999
+        {
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 1);
+        }
         PlayerPrefs.Save();
-
         upgradeVFX.SetActive(true);
         StartCoroutine("waitABit");
-
-       
     }
+
     private IEnumerator waitABit()
     {
         yield return new WaitForSeconds(2.0f);

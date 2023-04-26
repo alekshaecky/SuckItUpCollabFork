@@ -1554,7 +1554,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh129484
+  m_Name: pb_Mesh39688
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13512,7 +13512,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh129668
+  m_Name: pb_Mesh39872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20058,6 +20058,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: daa050dfe52724b7baf2e32f5879222b, type: 3}
     - target: {fileID: 103339729365298947, guid: b42d8ed352e936b408a1eac1967fad87, type: 3}
+      propertyPath: failSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: cb57ec661326db14897506fad8522db6, type: 3}
+    - target: {fileID: 103339729365298947, guid: b42d8ed352e936b408a1eac1967fad87, type: 3}
+      propertyPath: successSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 3117cd823b3f31a42bcecefab96ef0ce, type: 3}
+    - target: {fileID: 103339729365298947, guid: b42d8ed352e936b408a1eac1967fad87, type: 3}
       propertyPath: upgradeVFX
       value: 
       objectReference: {fileID: 967170583784372676, guid: bbfeb71e5e0ab9a4c8256df2adc5d6d5, type: 3}
@@ -20180,6 +20188,94 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b42d8ed352e936b408a1eac1967fad87, type: 3}
   m_PrefabInstance: {fileID: 1251131612}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1251131616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251131613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d8ddf8b9f63d440a642eebbb2f785f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonSFX: {fileID: 0}
+  indexSFX: 0
+  HUDstyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  HUDtext: 
+  HUDrect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!1 &1294405876
 GameObject:
   m_ObjectHideFlags: 0

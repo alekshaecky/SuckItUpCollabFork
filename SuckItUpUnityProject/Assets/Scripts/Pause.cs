@@ -110,7 +110,6 @@ public class Pause : MonoBehaviour
 		{
 			// sets the global font used by OnGUI() UI stuff
 			GUI.skin.font = guiFont;
-			Debug.Log("Set font to " + guiFont.name);
 		}
 
 		if (bPaused)
@@ -119,7 +118,6 @@ public class Pause : MonoBehaviour
 			{
 			// sets the global font used by OnGUI() UI stuff
 			GUI.skin.font = PauseFont;
-			Debug.Log("Set font to " + PauseFont.name);
 			}
 
 			//Calculate change aspects
@@ -141,7 +139,6 @@ public class Pause : MonoBehaviour
 				{
 					// sets the global font used by OnGUI() UI stuff
 					GUI.skin.font = guiFont;
-					Debug.Log("Set font to " + guiFont.name);
 				}
 				UnPause();
 				SoundBoard.Instance.PlaySFX(indexSFX);
@@ -153,7 +150,6 @@ public class Pause : MonoBehaviour
 				{
 					// sets the global font used by OnGUI() UI stuff
 					GUI.skin.font = guiFont;
-					Debug.Log("Set font to " + guiFont.name);
 				}
 				UnPause();                  // resume game
 				SoundBoard.Instance.PlaySFX(indexSFX);

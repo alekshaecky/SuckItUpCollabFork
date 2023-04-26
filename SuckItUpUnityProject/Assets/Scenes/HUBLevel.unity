@@ -19212,6 +19212,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 103339729365298947, guid: b42d8ed352e936b408a1eac1967fad87, type: 3}
+      propertyPath: MySFX
+      value: 
+      objectReference: {fileID: 8300000, guid: daa050dfe52724b7baf2e32f5879222b, type: 3}
+    - target: {fileID: 103339729365298947, guid: b42d8ed352e936b408a1eac1967fad87, type: 3}
       propertyPath: upgradeVFX
       value: 
       objectReference: {fileID: 967170583784372676, guid: bbfeb71e5e0ab9a4c8256df2adc5d6d5, type: 3}

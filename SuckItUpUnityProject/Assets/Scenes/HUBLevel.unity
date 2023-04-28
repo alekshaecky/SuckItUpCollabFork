@@ -6439,6 +6439,10 @@ PrefabInstance:
       propertyPath: VacuumSFX
       value: 
       objectReference: {fileID: 8300000, guid: 7d0df7ece80efd144b29ba1a0f10be92, type: 3}
+    - target: {fileID: 451168051, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: nozzleRank
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Name
       value: First Person Controller

@@ -17,6 +17,7 @@ public class JunkMeter : MonoBehaviour
 	{
 		VacRef = GameObject.FindObjectOfType<Vacuum>();
 		JunkCapacity = VacRef.GetCapacity();
+		Debug.Log(JunkCapacity);
 		piecesOfJunk = PlayerPrefs.GetInt("PrefsTotalScore");             // Gets the max score value (# of Junk in Level)
 		nozzleRank = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
 

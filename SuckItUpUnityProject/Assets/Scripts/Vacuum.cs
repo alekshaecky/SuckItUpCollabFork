@@ -31,11 +31,14 @@ public class Vacuum : MonoBehaviour
 	int SuckedAudioIndex;
 	int Capacity;
 
-	// Start is called before the first frame update
+	void Awake()
+    {
+		nozzleRank = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
+		Debug.Log("Vacuum.Start() " + nozzleRank);
+	}
+	
 	void Start()
 	{
-		nozzleRank = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
-
 		// They are different for each nozzle, so we need to get them.
 		// Only 1 Nozzle is active at a time, so this should always get the correct FX for the nozzle.
 		NozzleSuckVFX = GameObject.FindWithTag("NozzleSuckVFX");
@@ -64,6 +67,8 @@ public class Vacuum : MonoBehaviour
 
 	public int GetCapacity()
 	{
+		Debug.Log("Vacuum.GetCapacity() " + nozzleRank);
+
 		switch (nozzleRank)
         {
 			case 1:

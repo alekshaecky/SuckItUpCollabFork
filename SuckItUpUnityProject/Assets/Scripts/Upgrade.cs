@@ -34,6 +34,10 @@ public class Upgrade : MonoBehaviour
         int currentVaccumPower = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
         int newVaccumPower;
 
+        if (score >= 1000000) {
+            string youAreAWinnerMessage = "You've done it! No more upgrades. You've defeated the JUNK!";
+            GameObject.Find("Alert").GetComponent<Alert>().SetAlertText(youAreAWinnerMessage);
+        }
         if (score >= 250000) // 250000+ 
         {
             newVaccumPower = 5;

@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 451168051}
   m_Layer: 0
   m_Name: Crosshair
-  m_TagString: Untagged
+  m_TagString: Crosshair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1542,7 +1542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3646362e0a639a44c8ad18e89a5a84fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nozzleRank: 0
   NozzleDustCloudPrefab: {fileID: 6513599730104301078, guid: df619aa679c6eb049b3f1ab2d14b4633, type: 3}
   FullVFX: {fileID: 0}
   VacuumSFX: {fileID: 8300000, guid: 7d0df7ece80efd144b29ba1a0f10be92, type: 3}

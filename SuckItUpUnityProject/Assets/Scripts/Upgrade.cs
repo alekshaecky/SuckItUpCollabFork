@@ -64,19 +64,14 @@ public class Upgrade : MonoBehaviour
             PlayerPrefs.Save();
             upgradeVFX.SetActive(true);
             // Play an Upgrade sound
-            if (upgradeAudioIndex != null) {
-                SoundBoard.Instance.PlaySFX(upgradeAudioIndex);
-            }
+            SoundBoard.Instance.PlaySFX(upgradeAudioIndex);
             GameObject.Find("Alert").GetComponent<Alert>().SetAlertText("Upgraded from: " + currentVaccumPower + " to: " + newVaccumPower + "!");
             StartCoroutine("waitABit");
         }
         else
         {
             // Play a Sorry Sound. 
-            if (failAudioIndex != null)
-            {
-                SoundBoard.Instance.PlaySFX(failAudioIndex);
-            }
+            SoundBoard.Instance.PlaySFX(failAudioIndex);
             GameObject.Find("Alert").GetComponent<Alert>().SetAlertText("Vacuum more to upgrade!");
         }
     }

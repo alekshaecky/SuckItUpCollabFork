@@ -1,40 +1,68 @@
 using UnityEngine;
-using System.Collections;
 
 public class UpgradeMeter : MonoBehaviour
 {
-    public Texture2D UpgradeMeterTexture;
-	public int NozzleLevel; 				
-	public int MaxJunk;
-	public int VacuumedJunk; 
+    public float PercentageFull;
 
-	// Use this for initialization
-	void Start()
-	{
-		NozzleLevel = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");       // The level of the players nozzle 
-		MaxJunk = PlayerPrefs.GetInt("PrefsTotalScore");                  // Gets the max score of game
-		VacuumedJunk = PlayerPrefs.GetInt("PrefsTempScore");             // Gets the current score value (# of Junk the player has Vacuumed)
-	}
+    Vector3 SpriteScale;
+    float YScale;
+    SpriteRenderer vertSprite;
 
-	// Update is called once per frame
-	void Update()
-	{
-		MaxJunk = MaxJunk + VacuumedJunk;
-	}
+    // Start is called before the first frame update
+    void Start()
+    {
+        // get the sprite render component
+        vertSprite = GetComponent<SpriteRenderer>();
+        // get original scale (in example 1, 10, 1)
+        SpriteScale = vertSprite.gameObject.transform.localScale;
+        // save Yscale based on current object scale as 100%
+        YScale = SpriteScale.y;
+		// NextUpgradeAmount is the denominator in the percentage
+		float NextUpgradeAmount = GetUpgradeScore(PlayerPrefs.GetInt("PrefsCurrentVacuumPower"));
+		// TotatScoreAmount is the numerator in the percentage
+		float TotalScoreAmount = PlayerPrefs.GetInt("PrefsTotalScore");
+		// calculate PercentageFull from PrefsTotalScore divided by GetUpgradeScore() amount
+		PercentageFull = TotalScoreAmount/NextUpgradeAmount;
+    }
 
-	// Initialize GUI
-	void OnGUI()
+    // Update is called once per frame
+    void Update()
+    {
+        // range check PercentageFull value 0 to 1.0 aka 100%
+        if(PercentageFull > 1.0f)
+		{
+            PercentageFull = 1.0f;
+		}
+        if(PercentageFull < 0.0f)
+		{
+            PercentageFull = 0.0f;
+		}
+        // recalculate sprite scale
+        SpriteScale = new Vector3(SpriteScale.x, PercentageFull * YScale, SpriteScale.z);
+        // set sprite transform
+        vertSprite.gameObject.transform.localScale = SpriteScale;
+    }
+
+	public float GetUpgradeScore(int nozzleRank)
 	{
-		Rect HUDrect = new Rect(1400, 950, 500, 80);
-		
-		//Calculate change aspects - WebGL can change - but render is HD 1920x1080
-		float resX = (float)(Screen.width) / 1920f;
-		float resY = (float)(Screen.height) / 1080f;
-		
-		//Set matrix
-		GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(resX, resY, 1));
-        
-		GUI.Box(HUDrect, "");                   // displays default GUI box without header around meter
-		GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 5, (HUDrect.width - MaxJunk) * VacuumedJunk / NozzleLevel, HUDrect.height - 10), UpgradeMeterTexture, ScaleMode.StretchToFill, false);
+		// capacity based on current nozzleRank
+		if (nozzleRank == 1)
+		{
+			return 1000f;
+		}
+		if (nozzleRank == 2)
+		{
+			return 10000f;
+		}
+		if (nozzleRank == 3)
+		{
+			return 50000f;
+		}
+		if (nozzleRank == 4)
+		{
+			return 250000f;
+		}
+		// else nozzleRank is 5
+		return 1000000f;
 	}
 }

@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 // can add GUI.DrawTexture(...) to display images with text and buttons
 public class Pause : MonoBehaviour
 {
-	public string HowToPlayText;
 	public static bool bPaused;            //Boolean to check if the game is paused or not
 	public Texture2D BGImg;
 
@@ -28,8 +27,15 @@ public class Pause : MonoBehaviour
 	public Font guiFont;            // default font to use for OnGui elements
 	public Font PauseFont;            // Pause Menu font to use for OnGui elements
 
+	private string HowToPlayText1;
+	private string HowToPlayText2;
+	private string HowToPlayText3;
+
 	void Start()
 	{
+		HowToPlayText1 = " How To Play ";
+		HowToPlayText2 = "CONTROLS: WASD To Move, MOUSE To Look/Aim, Left-Mouse Button To Suck, ";
+		HowToPlayText3 = "Space To Jump, & Left-Shift To Sprint";
 		HowToStyle.alignment = TextAnchor.UpperCenter;      // sets text flow left to right from top
 		HowToStyle.fontSize = 40;                         // font size to 40 (for HD display
 		HowToStyle.normal.textColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);  // text color white White
@@ -53,12 +59,6 @@ public class Pause : MonoBehaviour
 		ButtonStyle2.normal.textColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);   // text color is solid white
 		ButtonStyle2.normal.background = (Texture2D)Resources.GetBuiltinResource(typeof(Texture2D), "GameSkin/button.png");  // use a default button
 		ButtonStyle2.normal.background = ButtonImg2;  // use custom button
-
-		// process string and display
-		string temp;
-		temp = HowToPlayText.Replace("\\n", "\n");
-		temp = temp.Replace("\\t", "\t");
-		HowToPlayText = temp;
 
 		indexSFX = SoundBoard.Instance.AddSoundEffect(ButtonSFX);
 	}
@@ -129,30 +129,30 @@ public class Pause : MonoBehaviour
 
 			GUI.DrawTexture(new Rect(0, 0, 1920f, 1385f), BGImg);
 
-			GUI.Box(new Rect(0, 20, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
+			GUI.Box(new Rect(20, 20, 1920f, 1080f), "Game Paused", GamePausedStyle);                   // displays default GUI box without header
 
-			GUI.Label(new Rect(10, 175, 1920f - 20f, 1080f * 0.75f), HowToPlayText, HowToStyle);
+			GUI.Label(new Rect(10, 155, 1920f - 20f, 1080f * 0.75f), HowToPlayText1 + "\n" + HowToPlayText2 + "\n" + HowToPlayText3, HowToStyle);
 
 			if (GUI.Button(new Rect(1920f / 2 - -35, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle2))  // Quit to Main Menu Button
 			{
+				SoundBoard.Instance.PlaySFX(indexSFX);
 				if ((guiFont != null) && (GUI.skin.font != guiFont))
 				{
 					// sets the global font used by OnGUI() UI stuff
 					GUI.skin.font = guiFont;
 				}
 				UnPause();
-				SoundBoard.Instance.PlaySFX(indexSFX);
 				SceneManager.LoadScene(0);  // quit to menu
 			}
 			if (GUI.Button(new Rect(1920f / 2 - 360, 1080f * 0.75f + -465, 300, 160), " ", ButtonStyle1))  // Resume game Button
 			{
+				SoundBoard.Instance.PlaySFX(indexSFX);
 				if ((guiFont != null) && (GUI.skin.font != guiFont))
 				{
 					// sets the global font used by OnGUI() UI stuff
 					GUI.skin.font = guiFont;
 				}
 				UnPause();                  // resume game
-				SoundBoard.Instance.PlaySFX(indexSFX);
 			}
 		}
 	}

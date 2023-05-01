@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
 	public string HowToPlayText;
-	bool bPaused;            //Boolean to check if the game is paused or not
+	public static bool bPaused;            //Boolean to check if the game is paused or not
 	public Texture2D BGImg;
 
 	[HideInInspector]

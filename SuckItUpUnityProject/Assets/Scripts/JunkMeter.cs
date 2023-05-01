@@ -8,7 +8,10 @@ public class JunkMeter : MonoBehaviour
 	public int piecesOfJunk;
 	public int nozzleRank;
 	public GUIStyle HUDstyle2;       // set the text style of the frame counter
+	public GUIStyle LVLstyle;       // set the text style of the frame counter
 	public Rect HUDrect;
+
+	public Texture2D nozzleIcon;
 
 	Vacuum VacRef;
 
@@ -23,9 +26,14 @@ public class JunkMeter : MonoBehaviour
 
 		HUDrect = new Rect(1400, 15, 500, 80);  // based on 1920x1080 screen
 		HUDstyle2.alignment = TextAnchor.UpperLeft;      // sets text flow left to right from top
-		HUDstyle2.fontSize = 100;                         // font size to 100 (for HD display
-		HUDstyle2.normal.textColor = Color.white;		// text color white
+		HUDstyle2.fontSize = 75;                         // font size to 100 (for HD display
+		HUDstyle2.normal.textColor = Color.red;		// text color Red
 		HUDstyle2.normal.background = null;
+
+		LVLstyle.alignment = TextAnchor.UpperLeft;      // sets text flow left to right from top
+		LVLstyle.fontSize = 38;                         // font size to 100 (for HD display
+		LVLstyle.normal.textColor = Color.red;		// text color Red
+		LVLstyle.normal.background = null;
 	}
 
 	// Update is called once per frame
@@ -60,18 +68,24 @@ public class JunkMeter : MonoBehaviour
 	// Initialize GUI
 	void OnGUI()
 	{
-		//Calculate change aspects - WebGL can change - but render is HD 1920x1080
-		float resX = (float)(Screen.width) / 1920f;
-		float resY = (float)(Screen.height) / 1080f;
+		if (Pause.bPaused == false)
+		{
+			//Calculate change aspects - WebGL can change - but render is HD 1920x1080
+			float resX = (float)(Screen.width) / 1920f;
+			float resY = (float)(Screen.height) / 1080f;
 		
-		//Set matrix
-		GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(resX, resY, 1));
+			//Set matrix
+			GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(resX, resY, 1));
 
-		int tempScore = PlayerPrefs.GetInt("PrefsTempScore");
+			int tempScore = PlayerPrefs.GetInt("PrefsTempScore");
+			
+			GUI.DrawTexture(new Rect(1270, 5, 128f, 128f), nozzleIcon);
 
-		GUI.Box(HUDrect, "");                   // displays default GUI box without header around meter
-		int meterValue = (tempScore > JunkCapacity) ? JunkCapacity : tempScore;   // set meter - but not over
-		GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 5, (HUDrect.width - 10) * meterValue / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
-		GUI.Label(HUDrect, nozzleRank.ToString(), HUDstyle2);
+			GUI.Box(new Rect(1400, 20, 500, 80), "");                   // displays default GUI box without header around meter
+			int meterValue = (tempScore > JunkCapacity) ? JunkCapacity : tempScore;   // set meter - but not over
+			GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 10, (HUDrect.width - 10) * meterValue / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
+			GUI.Label(new Rect(1313, 15, 1920f - 20f, 1080f * 0.75f), "lvl", LVLstyle);      // displays "lvl" above the nozzle level number
+			GUI.Label(new Rect(1310, 55, 1920f - 20f, 1080f * 0.75f), nozzleRank.ToString(), HUDstyle2); // displays the nozzle level number 
+		}
 	}
 }

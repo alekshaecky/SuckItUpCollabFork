@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shockwavePrefab: {fileID: 0}
-  MySFX: {fileID: 0}
+  MySFX: {fileID: 8300000, guid: 190e22b2cb9be604485ae3f27ecd6196, type: 3}
 --- !u!65 &5789757344176252774
 BoxCollider:
   m_ObjectHideFlags: 0

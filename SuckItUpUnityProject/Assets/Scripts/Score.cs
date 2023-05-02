@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
         TotalScoreAmount = PlayerPrefs.GetInt("PrefsTotalScore");
         ScoreText = GetComponent<TextMesh>();
         ScoreText.text = "Current: " + TempScoreAmount.ToString() + "\nTotal: " + TotalScoreAmount.ToString();
-        InvokeRepeating("ScoreUpdate", 1.0f, 1.0f);
+        InvokeRepeating("ScoreUpdate", 0.2f, 0.2f);
     }
 
     private void OnDestroy()

@@ -50,7 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3rdPartyTestScene.unity
     guid: 15692eecf44deed4a994e020c9e29624
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ForceCapacityTest.unity
     guid: 5ffdf7f444d302a4d93a78bccf93a608
   - enabled: 1

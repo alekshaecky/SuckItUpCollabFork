@@ -40,7 +40,7 @@ public class MakeRoomsSuckable : MonoBehaviour
                 room.AddComponent<Rigidbody>();
                 Rigidbody rb = room.GetComponent<Rigidbody>();
                 rb.useGravity = false;
-                rb.mass = 1.0f;
+                rb.mass = 10000.0f;
 
             }
             // Now we poof all the teleporters and targets.

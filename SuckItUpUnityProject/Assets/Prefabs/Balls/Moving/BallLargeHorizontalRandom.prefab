@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4877219496241033121}
   - component: {fileID: 7663288954770963498}
   - component: {fileID: 7003219896381040516}
+  - component: {fileID: 5000094008981181333}
   m_Layer: 0
   m_Name: BallLargeHorizontalRandom
   m_TagString: BounceRandomHorizontal
@@ -8690,6 +8691,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5765b1a3bc96b3428bab201bfd26d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &5000094008981181333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212862329113635584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7134c1c214c3d439d40a3c971d0c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   BounceSFX: {fileID: 8300000, guid: ee8b28a9348aa5b43abbb8a777edfaa2, type: 3}
   target: {fileID: 0}
-  speed: 10

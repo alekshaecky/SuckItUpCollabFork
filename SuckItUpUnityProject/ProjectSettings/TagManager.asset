@@ -22,6 +22,7 @@ TagManager:
   - NozzleSmokeVFX
   - Test
   - TeleportFX
+  - Crosshair
   layers:
   - Default
   - TransparentFX

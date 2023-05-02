@@ -12,11 +12,6 @@ using UnityEngine;
  */
 public class BounceBall : MonoBehaviour
 {
-
-    public AudioClip BounceSFX;
-    int BounceAudioIndex;
-
-    public Transform target;
     public float speed = 10;
 
     private Rigidbody rb;
@@ -24,7 +19,6 @@ public class BounceBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BounceAudioIndex = SoundBoard.Instance.AddSoundEffect(BounceSFX);
         rb = this.GetComponent<Rigidbody>();
     }
 
@@ -130,29 +124,5 @@ public class BounceBall : MonoBehaviour
 
         if (rb.velocity.y <= 0) rb.velocity = new Vector3(rb.velocity.x, Random.Range(-speed, -speed / 2), rb.velocity.z);
         if (rb.velocity.y > 0) rb.velocity = new Vector3(rb.velocity.x, Random.Range(speed / 2, speed), rb.velocity.z);
-    }
-
-
-    void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log(other.gameObject.name);
-        if (other.gameObject.name == "Player")
-        {
-            SoundBoard.Instance.PlaySFX(BounceAudioIndex);
-            // Move the Player to Start; nothing is lost.
-            if (target != null)
-            {
-                // Teleport the Player, usually back to start.
-                other.transform.position = target.position;
-                other.transform.rotation = target.rotation;
-                Physics.SyncTransforms();  // update transforms so Physics and Move controller work properly after teleport
-
-                // Lose Score based on mass of ball
-                int TempScore = PlayerPrefs.GetInt("PrefsTempScore");
-                TempScore -= (int)rb.mass;
-                PlayerPrefs.SetInt("PrefsTempScore", TempScore);
-                PlayerPrefs.Save();
-            }
-        }
     }
 }

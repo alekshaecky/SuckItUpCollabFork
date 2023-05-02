@@ -7,80 +7,73 @@ public class Upgrade : MonoBehaviour
 {
 
     private GameObject upgradeVFX;
-    public AudioClip MySFX;
 
-    private int AudioIndex;
-
+    public AudioClip successSFX;
+    public AudioClip failSFX;
+    private int upgradeAudioIndex;
+    private int failAudioIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        AudioIndex = SoundBoard.Instance.AddSoundEffect(MySFX);
+        upgradeAudioIndex = SoundBoard.Instance.AddSoundEffect(successSFX);
+        failAudioIndex = SoundBoard.Instance.AddSoundEffect(failSFX);
 
         upgradeVFX = GameObject.Find("StarBurstParticles");
         if (upgradeVFX) upgradeVFX.SetActive(false); // turn off the effect now that we have a reference. 
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    // check Nozzle level
-    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 10000)
-    //    {
-    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 1);
-    //    }
-    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 20000)
-    //    {
-    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 2);
-    //    }
-    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 25000)
-    //    {
-    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 3);
-    //    }
-    //    if (PlayerPrefs.GetInt("PrefsTotalScore") < 30000)
-    //    {
-    //        PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 4);
-    //    }
-    //    // else bigger than 50000
-    //    PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
-    //    PlayerPrefs.Save();
-
-    //    upgradeVFX.SetActive(true);
-    //    StartCoroutine("waitABit");
-    //}
 
     private void OnTriggerEnter(Collider other)
     {
-        float score = PlayerPrefs.GetInt("PrefsTotalScore");
+        int score = PlayerPrefs.GetInt("PrefsTotalScore");
+        int currentVaccumPower = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
+        int newVaccumPower;
 
-        if (score >= 40000 ) // 40000+ 
-        {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 5);
+        if (score >= 1000000) {
+            string youAreAWinnerMessage = "You've done it! No more upgrades. You've defeated the JUNK!";
+            GameObject.Find("Alert").GetComponent<Alert>().SetAlertText(youAreAWinnerMessage);
         }
-        else if (score >= 30000) //30000 - 39000 
+        if (score >= 250000) // 250000+ 
         {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 4);
+            newVaccumPower = 5;
         }
-        else if (score >= 20000) // 20000 - 29999
+        else if (score >= 50000) //50000 - 249999
         {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 3);
+            newVaccumPower = 4;
         }
-        else if (score >= 10000) // 10000 - 19999
+        else if (score >= 10000) // 10000 - 49999
         {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 2);
+            newVaccumPower = 3;
         }
-        else // 0 - 9999
+        else if (score >= 1000) // 1000 - 9999
         {
-            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", 1);
+            newVaccumPower = 2;
         }
-        PlayerPrefs.Save();
-        upgradeVFX.SetActive(true);
-        StartCoroutine("waitABit");
+        else // 0 - 999
+        {
+            newVaccumPower = 1;
+        }
+
+        if (newVaccumPower > currentVaccumPower) {
+            PlayerPrefs.SetInt("PrefsCurrentVacuumPower", newVaccumPower);
+            PlayerPrefs.Save();
+            upgradeVFX.SetActive(true);
+            // Play an Upgrade sound
+            SoundBoard.Instance.PlaySFX(upgradeAudioIndex);
+            GameObject.Find("Alert").GetComponent<Alert>().SetAlertText("Upgraded from: " + currentVaccumPower + " to: " + newVaccumPower + "!");
+            StartCoroutine("waitABit");
+        }
+        else
+        {
+            // Play a Sorry Sound. 
+            SoundBoard.Instance.PlaySFX(failAudioIndex);
+            GameObject.Find("Alert").GetComponent<Alert>().SetAlertText("Vacuum more to upgrade!");
+        }
     }
 
     private IEnumerator waitABit()

@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  MySFX: {fileID: 8300000, guid: de8cfaed7e0de834fb9cbd771d1753bb, type: 3}
+  MySFX: {fileID: 8300000, guid: 190e22b2cb9be604485ae3f27ecd6196, type: 3}
   teleportFXPrefab: {fileID: 6746700765106180221, guid: 5dfb443f8885eef4e90e6157dca50167, type: 3}
 --- !u!1 &3145616903457793836
 GameObject:

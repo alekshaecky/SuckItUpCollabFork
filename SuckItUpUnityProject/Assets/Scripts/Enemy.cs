@@ -14,7 +14,9 @@ public class Enemy : MonoBehaviour
 	CharacterController EnemyController;    // character controller for movement
 	CameraShake cameraShake;                // to make Main Camera shake
 	bool bAlive;                            // is enemy alive
-	Patrol patrol; 
+	Patrol patrol;
+
+	private Material hitEffect;
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,6 +31,8 @@ public class Enemy : MonoBehaviour
 		cameraShake = Camera.main.gameObject.GetComponent<CameraShake>();
 		bAlive = true;
 		patrol = GetComponent<Patrol>();
+
+		hitEffect = GameObject.Find("ScreenSplashEffect").GetComponent<Renderer>().material;
 	}
 
 	// Update is called once per frame
@@ -65,6 +69,20 @@ public class Enemy : MonoBehaviour
         {
 			if (patrol && patrol.enabled == false) patrol.enabled = true;
 		}
+
+		if (hitEffect.color.a > 0)
+		{
+			var color = hitEffect.color;
+			color.a -= 0.02f * Time.deltaTime;
+			hitEffect.color = color;
+
+			if (hitEffect.color.a <= 0f)
+			{
+				color.a = 0f; // Need to make sure it's 0
+				hitEffect.color = color;
+				Reload(); // Unfortunately, there is a delay caused by the Load. 
+			}
+		}
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit)
@@ -82,7 +100,19 @@ public class Enemy : MonoBehaviour
 				//shake camera
 				StartCoroutine(cameraShake.Shake(0.15f, 0.4f));
 			}
-			Invoke("Reload", 2);  // wait 2 seconds, then reload level
+
+			// Show visual hit effect.
+			if (hitEffect)
+			{
+				// You cannot change the values of color, so you have to get it, change it, and set it.
+				var color = hitEffect.color;
+				if (color.a == 0f) // because we hit the collider more than once. 
+				{
+					color.a = 0.6f;
+				}
+				hitEffect.color = color;
+			}
+			
 		}
 	}
 

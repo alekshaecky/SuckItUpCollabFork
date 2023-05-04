@@ -14466,7 +14466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c3174e4cee3b249bb05722c8d420dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorSceneIndex: 16
+  DoorSceneIndex: 15
   shockwavePrefab: {fileID: 0}
   MySFX: {fileID: 0}
 --- !u!65 &802558896

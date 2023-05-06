@@ -56,5 +56,6 @@ public class Init : MonoBehaviour
 		PlayerPrefs.SetInt("PrefsLevel5HighScore", 0);                  // level 5 high score
 																		// add and initialize any additional presistent data
 																		// for your game below using SetInt, SetFloat, or SetString
+		PlayerPrefs.SetInt("PrefsTutorialComplete", 0);					// Whether Player has done tutorial. 
 	}
 }

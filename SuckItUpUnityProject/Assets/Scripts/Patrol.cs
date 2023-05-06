@@ -22,16 +22,18 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //calc distance to target location
-        float dist = Vector3.Distance(transform.position, spots[index].position);
-        if (dist < 1)
-        {
-            index++;
-            if (index >= spots.Length) index = 0;
-            
+        if (spots.Length > 0 ) {
+            //calc distance to target location
+            float dist = Vector3.Distance(transform.position, spots[index].position);
+            if (dist < 1)
+            {
+                index++;
+                if (index >= spots.Length) index = 0;
+
+            }
+            //Look at movepoint
+            transform.LookAt(spots[index]);
+            transform.position += transform.forward * speed;
         }
-        //Look at movepoint
-        transform.LookAt(spots[index]);
-        transform.position += transform.forward * speed;
     }
 }

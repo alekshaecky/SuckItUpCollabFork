@@ -34,7 +34,7 @@ public class Vacuum : MonoBehaviour
 	void Awake()
     {
 		nozzleRank = PlayerPrefs.GetInt("PrefsCurrentVacuumPower");
-		Debug.Log("Vacuum.Start() " + nozzleRank);
+		//Debug.Log("Vacuum.Start() " + nozzleRank);
 	}
 	
 	void Start()
@@ -67,7 +67,7 @@ public class Vacuum : MonoBehaviour
 
 	public int GetCapacity()
 	{
-		Debug.Log("Vacuum.GetCapacity() " + nozzleRank);
+		//Debug.Log("Vacuum.GetCapacity() " + nozzleRank);
 
 		switch (nozzleRank)
         {
@@ -82,7 +82,7 @@ public class Vacuum : MonoBehaviour
 			case 5:
 				return 100000;
 			default:
-				Debug.Log("Nozzle Rank is out of Range: " + nozzleRank);
+				//Debug.Log("Nozzle Rank is out of Range: " + nozzleRank);
 				return 0;
         }
 	}
@@ -181,7 +181,7 @@ public float SuckForce(float objMass)
 			else
 			{
 				// play FULL capacity SFX
-				Debug.Log("Full capacity");
+				//Debug.Log("Full capacity");
 				SoundBoard.Instance.PlaySFX(FullAudioIndex);
 			}
 		}
@@ -300,12 +300,12 @@ public float SuckForce(float objMass)
 					// check if suck force is moving object
 					if (rb.velocity.magnitude > 1.0f)
 					{
-						Debug.Log("vel = " + rb.velocity.magnitude);
+						//Debug.Log("vel = " + rb.velocity.magnitude);
 						StartCoroutine(ScaleToTargetCoroutine(rb, new Vector3(0.1f, 0.1f, 0.1f), 0.25f));
 					}
 					else
 					{
-						Debug.Log("vel = " + rb.velocity.magnitude);
+						//Debug.Log("vel = " + rb.velocity.magnitude);
 					}
 				}
 			}

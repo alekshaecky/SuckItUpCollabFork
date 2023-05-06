@@ -23,6 +23,7 @@ public class Patrol : MonoBehaviour
     void FixedUpdate()
     {
         if (spots.Length > 0 ) {
+            Debug.Log("Spots: " + spots.Length);
             //calc distance to target location
             float dist = Vector3.Distance(transform.position, spots[index].position);
             if (dist < 1)
@@ -34,6 +35,10 @@ public class Patrol : MonoBehaviour
             //Look at movepoint
             transform.LookAt(spots[index]);
             transform.position += transform.forward * speed;
+        }
+        else
+        {
+            Debug.Log("No Spots: " + spots.Length);
         }
     }
 }

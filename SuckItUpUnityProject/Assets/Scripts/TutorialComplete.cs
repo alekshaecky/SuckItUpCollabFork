@@ -18,6 +18,7 @@ public class TutorialComplete : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        gameObject.GetComponent<Init>().InitializePlayerPrefs();
         PlayerPrefs.SetInt("PrefsTutorialComplete", 1);
         PlayerPrefs.Save();
     }

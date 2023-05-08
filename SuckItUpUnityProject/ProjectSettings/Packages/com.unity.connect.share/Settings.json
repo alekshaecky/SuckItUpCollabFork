@@ -6,7 +6,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/vhaec/Desktop/Class Projects/450 Collab/SuckItUp/WebGLBuild;C:/Users/vhaec/Desktop/Class Projects/450 Collab/SuckItUp/SuckItUpGame/SuckItUpUnityProject/WebGL Builds;C:/Users/vhaec/Desktop/Class Projects/450 Collab/SuckItUp/SuckItUpGame/WebGLBuilds;;;;;;;\"}"
+                "value": "{\"m_Value\":\"/Users/vertigo/Documents/PROJECTS/Unity/Github/Working/SuckItUpGame/_SUCK_IT_BUILDS/SuckItUp_May08;C:/Users/vhaec/Desktop/Class Projects/450 Collab/SuckItUp/WebGLBuild;C:/Users/vhaec/Desktop/Class Projects/450 Collab/SuckItUp/SuckItUpGame/SuckItUpUnityProject/WebGL Builds;C:/Users/vhaec/Desktop/Class Projects/450 Collab/SuckItUp/SuckItUpGame/WebGLBuilds;;;;;;\"}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",

@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceThreshold: 0.15
-  isGrounded: 0
+  isGrounded: 1
 --- !u!1 &1593727746557118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   NozzleDustCloudPrefab: {fileID: 6513599730104301078, guid: df619aa679c6eb049b3f1ab2d14b4633, type: 3}
   FullVFX: {fileID: 0}
   VacuumSFX: {fileID: 8300000, guid: 7d0df7ece80efd144b29ba1a0f10be92, type: 3}
-  FullSFX: {fileID: 8300000, guid: 9d3733755413b2d4d8e826d7e6076812, type: 3}
+  FullSFX: {fileID: 8300000, guid: 7f20ed5e1a9a95e4d951a3011735de20, type: 3}
   ObjectSuckedSFX: {fileID: 8300000, guid: e03f34a60e3131244b97c8e2d40f1ede, type: 3}
 --- !u!1001 &3040785810605535806
 PrefabInstance:

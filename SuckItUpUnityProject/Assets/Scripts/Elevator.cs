@@ -12,8 +12,9 @@ public class Elevator : MonoBehaviour
 
     private float speed = 5.0f;
     private Rigidbody rb;
-    //private GameObject player;
-    //private Rigidbody prb;
+    private float x;
+    private float z;
+    private Vector3 correctPosition;
  
 
     // Start is called before the first frame update
@@ -21,7 +22,20 @@ public class Elevator : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         rb.velocity = new Vector3(0, -speed, 0);
+
+        x = gameObject.transform.position.x;
+        z = gameObject.transform.position.z;
     }
+
+    void Update()
+    {
+        // Force elevator platform back into its position if it's moved away. 
+        if ((gameObject.transform.position.x != x) || (gameObject.transform.position.z != z)) {
+            correctPosition.Set(x, gameObject.transform.position.y, z);
+            gameObject.transform.position = correctPosition;
+        }
+    }
+
 
     void moveDown()
     {

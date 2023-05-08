@@ -25,7 +25,9 @@ public class UpgradeInTutorial : MonoBehaviour
         upgradeVFX = GameObject.Find("StarBurstParticles");
         if (upgradeVFX) upgradeVFX.SetActive(false); // turn off the effect now that we have a reference. 
 
-        tutorialExit.SetActive(false);
+        if (PlayerPrefs.GetInt("PrefsCurrentVacuumPower") < 2) {
+            tutorialExit.SetActive(false);
+        }
     }
 
     void Update()
@@ -42,7 +44,7 @@ public class UpgradeInTutorial : MonoBehaviour
 
         if (score >= 4000)
         {
-            tutorialExit.SetActive(true); 
+            //tutorialExit.SetActive(true); 
             string youAreAWinnerMessage = "You've finished the Tutorial! Exit and Play!";
             GameObject.Find("Alert").GetComponent<Alert>().SetAlertText(youAreAWinnerMessage);
         }
@@ -61,6 +63,9 @@ public class UpgradeInTutorial : MonoBehaviour
         else // 0 - 999
         {
             newVaccumPower = 1;
+            tutorialExit.SetActive(true);
+            string youAreAWinnerMessage = "Tutorial Exit activated. Keep practicing or exit to Play.";
+            GameObject.Find("Alert").GetComponent<Alert>().SetAlertText(youAreAWinnerMessage);
         }
 
         if (newVaccumPower > currentVaccumPower)

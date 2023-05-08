@@ -56,7 +56,7 @@ public class SecretMenu : MonoBehaviour
 			}
 		}
 
-		if (GUI.Button(new Rect(960 / 2 - 25, 600 - 10 - 50, 50, 50), "BACK"))
+		if (GUI.Button(new Rect(785 - 25, 600 - 10 - 75, 100, 45), "BACK"))
 		{
 			SceneManager.LoadScene(0);      // load the MENU scene at index 0
 		}

@@ -79,13 +79,17 @@ public class JunkMeter : MonoBehaviour
 
 			int tempScore = PlayerPrefs.GetInt("PrefsTempScore");
 			
-			GUI.DrawTexture(new Rect(1270, 5, 128f, 128f), nozzleIcon);
+			// Display the icon and icon text
+			GUI.DrawTexture(new Rect(1270, 30, 128f, 128f), nozzleIcon);
+			GUI.Label(new Rect(1313, 45, 1920f - 20f, 1080f * 0.75f), "lvl", LVLstyle);      // displays "lvl" above the nozzle level number
+			GUI.Label(new Rect(1310, 70, 1920f - 20f, 1080f * 0.75f), nozzleRank.ToString(), HUDstyle2); // displays the nozzle level number 
 
-			GUI.Box(new Rect(1400, 20, 500, 80), "");                   // displays default GUI box without header around meter
+			// Display the Junk Meter
+			float yDiff = 60;
+			GUI.Box(new Rect(1400, yDiff, 500, 80), "");                   // displays default GUI box without header around meter
 			int meterValue = (tempScore > JunkCapacity) ? JunkCapacity : tempScore;   // set meter - but not over
-			GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + 10, (HUDrect.width - 10) * meterValue / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
-			GUI.Label(new Rect(1313, 15, 1920f - 20f, 1080f * 0.75f), "lvl", LVLstyle);      // displays "lvl" above the nozzle level number
-			GUI.Label(new Rect(1310, 55, 1920f - 20f, 1080f * 0.75f), nozzleRank.ToString(), HUDstyle2); // displays the nozzle level number 
+			GUI.DrawTexture(new Rect(HUDrect.x + 5, HUDrect.y + yDiff, (HUDrect.width - 10) * meterValue / JunkCapacity, HUDrect.height - 10), JunkMeterTexture, ScaleMode.StretchToFill, false);
+
 		}
 	}
 }
